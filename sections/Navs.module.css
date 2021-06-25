@@ -1,0 +1,42 @@
+.navWrapper {
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+}
+
+.toggleButton {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: none;
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navWrapper {
+  }
+  .navList {
+    display: block;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    z-index: 10;
+  }
+  .toggleButton {
+    display: block;
+  }
+  .navList.open {
+      max-height: 30em !important;
+  }
+
+}
+
+

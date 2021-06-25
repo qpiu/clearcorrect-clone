@@ -1,0 +1,21 @@
+.sideButton {
+  position: fixed;
+  right: -80px;
+  padding: 5px;
+  transform: rotate(90deg);
+  background: #57c2b1;
+  border-radius: 5px;
+  z-index: 100;
+  bottom: 50%;
+}
+
+.sideButton a {
+  padding: 18px;
+  background-color: #fff;
+  color: #57c2b1;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+}
