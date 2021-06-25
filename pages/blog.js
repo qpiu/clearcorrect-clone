@@ -22,7 +22,7 @@ export default function Blog () {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <main className="flex flex-col items-center flex-1 px-20 py-10">
-                <h1 className="text-6xl font-bold mt-5 mb-5">ClearCorrect Website</h1>
+                <h1 className="text-6xl font-bold mt-5 mb-5">Health & Orthodontics</h1>
                 { posts && (
                     <div className="grid grid-cols-2 gap-5">
                         { posts.map( ( post, id ) => {
