@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Footer from '../components/Footer';
 import Post from '../components/Post';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { getAllPostsFromServer } from '../lib/utils';
 
@@ -22,18 +23,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex flex-col items-center flex-1 px-20 py-10">
-        <h1 className="text-6xl font-bold mt-5 mb-5">ClearCorrect Website</h1>
-        { posts && (
-          <div className="grid grid-cols-2 gap-5">
-            { posts.map( ( post, id ) => {
-              return (
-                <div key={ id }>
-                  <Post post={ post } />
-                </div>
-              );
-            } ) }
-          </div>
-        ) }
+        <Link href={ `/blog` }><a className="text-4xl font-bold">Health & Orthodonics</a></Link>
       </main>
       <Footer />
     </div>
