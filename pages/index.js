@@ -1,20 +1,6 @@
-import Head from 'next/head'
-import Footer from '../components/Footer';
-import Post from '../components/Post';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { getAllPostsFromServer } from '../lib/utils';
-
-export default function Home () {
-  const [ posts, setPosts ] = useState( [] );
-  useEffect( async () => {
-    let mounted = true;
-    if ( mounted ) {
-      const postsFromServer = await getAllPostsFromServer();
-      setPosts( postsFromServer );
-    }
-    return () => ( mounted = false );
-  }, [] );
+import Head from "next/head";
+import WcaList from "../sections/WcaList";
+import ScrollAnimation from "react-animate-on-scroll";
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen">
@@ -22,10 +8,48 @@ export default function Home () {
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center flex-1 px-20 py-10">
-        <Link href={ `/blog` }><a className="text-4xl font-bold">Health & Orthodonics</a></Link>
+      <main>
+        <ScrollAnimation animateIn="fadeIn">
+          <div className="flex">
+            <div className="hero-one-img"></div>
+            <div className="hero-one-txt">
+              <h1>Hey! We’re ClearCorrect</h1>
+              <h3>Nice to meet you.</h3>
+              <p>ClearCorrect™ was founded back in 2006 by a dentist – Dr. Willis Pumphrey, who had over 400 patients that needed to finish their clear aligner treatment, but no one to make the aligners for them.</p>
+              <p>So, Dr. Willis Pumphrey went the extra mile for his patients! He founded ClearCorrect™ to make aligners for his patients. He treated his 400 patients successfully with Clear Aligners with great results!</p>
+              <p>One by one, other dentists signed up to try Dr. Willis Pumphrey’s solution, and ClearCorrect was founded and started to grow.</p>
+              <p>Today, we have served tens of thousands of dentists all over the world and have delivered literally millions of aligners to our customers. Through it all, we’ve made it our priority to listen to our customers, and to put your needs first. That’s what’s kept us going for 15 years, and that’s how we know we’ll always be here.</p>
+              <p>We are ClearCorrect – Clear. Simple. Friendly.</p>
+            </div>
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeIn">
+          <section className="ftca-section">
+            <div className="container flex wca-head">
+              <div className="wca-img-block"></div>
+              <div className="wca-head">
+                <h2>why choose clear aligners?</h2>
+                <p>If you’re not completely happy with your smile, but aren’t a big fan of metal braces, clear aligners might be just the thing for you as they are:</p>
+                <WcaList></WcaList>
+              </div>
+            </div>
+          </section>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn="fadeIn">
+          <section className="ftca-section">
+            <div className="container flex">
+              <div className="dca-head">
+                <h2>How do clear aligners work?</h2>
+                <p>Based on your doctor’s prescription, we start working on your customised treatment plan using advance technology in order to create your unique, custom clear aligners that apply targeted pressure to your teeth to slowly move them into alignment.</p>
+              </div>
+              <div className="dca-img-block">
+                <img src="./assets/teeth_flow.png"/>
+              </div>
+            </div>
+          </section>
+        </ScrollAnimation>
       </main>
-      <Footer />
     </div>
   );
 }

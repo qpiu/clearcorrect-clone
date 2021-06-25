@@ -1,0 +1,75 @@
+.footerWrap {
+  padding: 5em 0 0;
+  position: relative;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.9);
+  background: #36393a;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  padding: 0.75rem;
+}
+
+.widget,
+.links,
+.contact {
+  padding: 0.75rem;
+}
+
+.widget {
+  flex: 1 0 0%;
+}
+
+.widget h2 {
+  margin-bottom: 40px;
+}
+
+.widget h2 a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+
+.widget h2 span {
+  color: #aaa;
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  font-weight: 500;
+}
+
+.links {
+  flex: 0 0 auto;
+  width: 16.66667%;
+}
+
+.footer span {
+  margin-right: 0.5rem;
+}
+
+.contact a,
+.links a {
+  color: #fff;
+  font-size: 10px;
+}
+
+.contact li,
+.links li {
+  margin-bottom: 10px;
+}
+
+.socialList {
+  display: flex;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.copyRight {
+  padding: 3rem 0;
+  text-align: center;
+}
