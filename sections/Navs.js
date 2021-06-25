@@ -8,7 +8,7 @@ const title = [
   { title: "Health and Orthodontics", href: "/blog" },
   { title: "Find Your Provider", href: "#" },
   { title: "Smile Check", href: "#" },
-  { title: "Get in Touch", href: "#" },
+  { title: "Get in Touch", href: "/contact" },
 ];
 
 export default function Navs () {
@@ -17,11 +17,11 @@ export default function Navs () {
   return (
     <ul className={ styles.navWrapper }>
       <button onClick={ () => setToggle( toggle => !toggle ) } className={ styles.toggleButton }>
-        <i class="fas fa-list"></i>Menu
+        <i className="fas fa-list"></i>Menu
       </button>
       <div className={ toggle ? `${ styles.navList } ${ styles.open }` : styles.navList }>
         { title.map( ( el, i ) => {
-          return <Nav el={ el }></Nav>;
+          return <Nav el={ el } key={ i }></Nav>;
         } ) }
       </div>
     </ul>

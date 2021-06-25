@@ -6,9 +6,7 @@ import Top from "../sections/Top";
 import SideButton from "../sections/SideButton";
 import Footer from "../sections/Footer";
 
-
-
-function MyApp({ Component, pageProps }) {
+function MyApp ( { Component, pageProps } ) {
   return (
     <>
       <Head>
@@ -18,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       <content>
         <Top></Top>
         <Navs />
-        <Component {...pageProps} />
+        <Component { ...pageProps } />
 
         <Footer></Footer>
 

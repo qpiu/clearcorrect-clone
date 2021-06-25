@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Footer from '../../components/Footer';
 import axios from 'axios';
 import parse from 'html-react-parser';
 import { getAuthor, getFeaturedImage } from '../../lib/utils';
@@ -22,7 +21,6 @@ export default function Post ( { title, featuredImg, author, content, date } ) {
                 <p className="text-sm font-semibold mb-5">Published on { new Date( date ).toDateString() }</p>
                 <div>{ parse( content ) }</div>
             </main>
-            <Footer />
         </div>
     );
 }

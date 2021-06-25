@@ -7,12 +7,12 @@ const list = [
   { src: "invisible-icon.png", txt: "NEARLY INVISIBLE" },
 ];
 
-export default function WcaList() {
+export default function WcaList () {
   return (
     <div className="flex">
-      {list.map((el, i) => {
-        return <WcaItem el={el}></WcaItem>;
-      })}
+      { list.map( ( el, i ) => {
+        return <WcaItem el={ el } key={ i }></WcaItem>;
+      } ) }
     </div>
   );
 }
