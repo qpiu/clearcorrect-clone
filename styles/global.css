@@ -187,6 +187,22 @@ p {
   background-image: url("../public/assets/journey_3.jpeg");
 }
 
+.blogs {
+  display: flex;
+  width: 75%;
+}
+
+.blog {
+  width: 50%;
+}
+
+.blog-side {
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 15px;
+  width: 25%;
+}
+
 @media (min-width: 360px) {
   .container {
     padding: 0 0.75rem;
