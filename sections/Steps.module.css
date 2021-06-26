@@ -1,0 +1,65 @@
+.stepsWrap h2 {
+  font-size: 30px;
+  margin-top: 60px;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}
+
+.stepsEnd {
+  margin: 60px 0;
+  display: flex;
+}
+
+.stepsEndTxt {
+  width: 50%;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f95474;
+}
+
+.stepsEndTxt p {
+  font-size: 24px;
+  line-height: 35px;
+  color: #ffffff;
+  margin-bottom: 0;
+  padding: 30px;
+}
+
+.stepsEndImg {
+  background-image: url("../public/assets/journey_4.jpeg");
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.stepBeltList {
+  display: flex;
+}
+
+.stepBeltList li {
+  display: flex;
+  width: 33.3%;
+  margin-top: 30px;
+  padding: 0 10px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.imgBlock {
+  width: 67px;
+}
+
+.txtBlock {
+    width: calc(100% - 67px);
+    padding-left: 15px;
+    font-size: 16px;
+
+}
+
+.stepBeltList li img {
+  max-width: 100%;
+}

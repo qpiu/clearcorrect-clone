@@ -7,7 +7,6 @@
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('../public/assets/who_we_are_bg.jpeg');
 }
 
 .txtFlex {
@@ -25,4 +24,15 @@
 
 .txtWrap h1 {
     font-size: 70px;
+}
+
+.whoweare {
+    background-image: url('../public/assets/who_we_are_bg.jpeg');
+}
+
+
+@media screen and (max-width: 767px) {
+    .txtWrap h1 {
+        font-size: 40px;
+    }
 }

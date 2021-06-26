@@ -14,7 +14,7 @@ export default function Home () {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero></Hero>
+        <Hero title="Who We Are" page="whoweare"></Hero>
 
         <HeroBelt></HeroBelt>
 
