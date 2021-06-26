@@ -6,14 +6,13 @@ import Wccs from "../sections/Wccs";
 import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
 
-export default function Home() {
+export default function Home () {
   return (
     <div>
       <Head>
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <Hero></Hero>
 
