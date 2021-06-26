@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Hero></Hero>
+        <Hero title="Who We Are" page="whoweare"></Hero>
 
         <HeroBelt></HeroBelt>
 

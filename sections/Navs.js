@@ -17,7 +17,7 @@ export default function Navs() {
   return (
     <ul className={styles.navWrapper}>
       <button onClick={() => setToggle(toggle => !toggle)} className={styles.toggleButton}>
-        <i class="fas fa-list"></i>Menu
+        <i className="fas fa-list"></i>Menu
       </button>
       <div className={toggle? `${styles.navList} ${styles.open}`: styles.navList}>
         {title.map((el, i) => {

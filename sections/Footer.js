@@ -16,14 +16,14 @@ export default function Footer() {
             <li>
               <a className="social-icon" href="#">
                 <span>
-                  <i class="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f"></i>
                 </span>
               </a>
             </li>
             <li>
               <a className="social-icon" href="#">
                 <span>
-                  <i class="fab fa-instagram"></i>
+                  <i className="fab fa-instagram"></i>
                 </span>
               </a>
             </li>
@@ -37,7 +37,7 @@ export default function Footer() {
             <li>
               <a href="#">
                 <span>
-                  <i class="fas fa-arrow-right"></i>
+                  <i className="fas fa-arrow-right"></i>
                 </span>
                 Home
               </a>
@@ -45,7 +45,7 @@ export default function Footer() {
             <li>
               <a href="#">
                 <span>
-                  <i class="fas fa-arrow-right"></i>
+                  <i className="fas fa-arrow-right"></i>
                 </span>
                 About
               </a>
@@ -54,7 +54,7 @@ export default function Footer() {
             <li>
               <a href="#">
                 <span>
-                  <i class="fas fa-arrow-right"></i>
+                  <i className="fas fa-arrow-right"></i>
                 </span>
                 Contact
               </a>
@@ -68,7 +68,7 @@ export default function Footer() {
             <li>
               <a href="#">
                 <span>
-                  <i class="fas fa-map"></i>
+                  <i className="fas fa-map"></i>
                 </span>
                 03 Fake St. Mountain View, San Francisco,
               </a>
@@ -76,7 +76,7 @@ export default function Footer() {
             <li>
               <a href="#">
                 <span>
-                  <i class="fas fa-phone"></i>
+                  <i className="fas fa-phone"></i>
                 </span>
                 +2 392 3929 210
               </a>

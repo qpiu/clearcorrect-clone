@@ -6,7 +6,7 @@ const Testimony = (props) => {
       <div className={styles.testimonyDesc}>
         <div className={styles.icon}>
           <span>
-            <i class="fas fa-quote-left"></i>
+            <i className="fas fa-quote-left"></i>
           </span>
         </div>
         <h5>{props.el.name}</h5>

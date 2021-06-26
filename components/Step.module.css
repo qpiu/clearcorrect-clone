@@ -1,0 +1,62 @@
+.stepWrap {
+  display: flex;
+  margin-top: 60px;
+}
+
+.stepWrapReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 60px;
+}
+
+.stepTxt {
+  width: 50%;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+}
+
+.stepTxt > div {
+  padding-right: 30px;
+}
+
+.stepWrapReverse .stepTxt > div {
+    padding-left: 30px;
+}
+
+.stepTxt h3 {
+  padding-top: 5px;
+  color: #36393a;
+}
+
+.stepImg {
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.stepList {
+  position: relative;
+  margin-top: 10px;
+  color: #777;
+}
+
+.stepList i {
+  padding-right: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .stepWrap,
+  .stepWrapReverse {
+    display: block;
+    margin-top: 30px;
+  }
+  .stepTxt,
+  .stepImg {
+    width: 100%;
+  }
+  .stepTxt {
+    padding: 15px 0;
+  }
+}

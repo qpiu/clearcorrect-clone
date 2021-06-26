@@ -29,11 +29,11 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .ftca-section {
-  padding: 1rem 0;
+  padding: 5rem 0;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -62,6 +62,10 @@ p {
   z-index: -1;
 }
 
+.wcc-section {
+  background: #57c2b1;
+}
+
 .hero-2 {
   background: #57c2b1;
   opacity: 0.8;
@@ -69,7 +73,7 @@ p {
 
 .container {
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 .hero-one-txt {
@@ -94,7 +98,7 @@ p {
   padding: 3rem 0;
 }
 .hero-one-img {
-  margin-right: .75rem;
+  margin-right: 0.75rem;
 }
 
 .hero-one-img {
@@ -163,35 +167,30 @@ p {
   color: #fff;
 }
 
-@media screen and (min-width: 1201px) {
+.whoweare {
+  background-image: url("../public/assets/who_we_are_bg.jpeg");
+}
+
+.journey {
+  background-image: url("../public/assets/journey_hero.jpeg");
+}
+
+.journey_1 {
+  background-image: url("../public/assets/journey_1.jpeg");
+}
+
+.journey_2 {
+  background-image: url("../public/assets/journey_2.jpeg");
+}
+
+.journey_3 {
+  background-image: url("../public/assets/journey_3.jpeg");
+}
+
+@media (min-width: 360px) {
   .container {
-    max-width: 1160px;
+    padding: 0 0.75rem;
   }
-}
-@media screen and (max-width: 1200px) {
-  .container {
-    margin: 0 .75rem;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .container {
-    margin: 0 .75rem;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-one-img {
-    display: none;
-  }
-  .hero-one-txt {
-    max-width: initial;
-    margin: 0 .75rem;
-  }
-
-}
-
-@media screen and (max-width: 360px) {
   .m360 {
     display: block;
   }
@@ -203,5 +202,37 @@ p {
   .dca-img-block {
     padding: 15px;
     width: inherit;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    max-width: 720px;
+    padding: 0 0.75rem;
+  }
+  .hero-one-img {
+    display: none;
+  }
+  .hero-one-txt {
+    max-width: initial;
+    margin: 0 0.75rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1120px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
   }
 }
