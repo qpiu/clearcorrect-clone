@@ -1,0 +1,28 @@
+.heroWrap {
+  min-height: auto;
+  z-index: 0;
+  height: 400px;
+  background-position: center center;
+  background-attachment: fixed;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../public/assets/who_we_are_bg.jpeg');
+}
+
+.txtFlex {
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    height: 400px;
+    justify-content: center;
+}
+
+.txtWrap {
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.txtWrap h1 {
+    font-size: 70px;
+}

@@ -1,0 +1,58 @@
+.heroBeltSection {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../public/assets/hero_2.jpeg");
+  color: rgba(255, 255, 255, 0.8);
+  z-index: 0;
+  position: relative;
+  padding: 3em 0;
+}
+
+.heroBeltSection h1 {
+  font-size: 30px;
+}
+
+.txtWrap {
+  width: 66.7%;
+}
+
+.txtWrap span {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.btnWrap {
+  display: flex;
+  align-items: center;
+  width: 33.3%;
+}
+
+.btnWrap p a {
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #fff;
+  border: 1px solid #fff;
+  color: #57c2b1;
+  padding: 24px 48px;
+}
+
+@media screen and (max-width: 767px) {
+  .btnWrap p a {
+    padding: 16px 24px;
+  }
+
+  .btnWrap {
+    width: initial;
+  }
+}

@@ -1,0 +1,12 @@
+.wcc {
+    width: 33.3%;
+    margin-top: 30px;
+    padding: 0 .75rem;
+}
+
+@media screen and (max-width: 767px) {
+    .wcc {
+        width: 80%;
+        margin: auto;
+    }
+}
