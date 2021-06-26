@@ -5,16 +5,17 @@
   padding: 0;
 }
 
-h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-
 body {
   color: #999;
   background-color: #f8f8f8;
   height: 200vh;
   font-size: 16px;
   line-height: 1.8;
+  font-family: "thesansb6_semibold";
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
 }
 
 h3 {
@@ -32,7 +33,7 @@ p {
 }
 
 .ftca-section {
-  padding: 5em 0;
+  padding: 1rem 0;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -42,9 +43,33 @@ p {
   display: flex;
 }
 
+.flex-justify-center {
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  background: #111;
+  z-index: -1;
+}
+
+.hero-2 {
+  background: #57c2b1;
+  opacity: 0.8;
+}
+
 .container {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto; 
 }
 
 .hero-one-txt {
@@ -64,9 +89,12 @@ p {
 .hero-one-txt p {
 }
 
-.hero-one-txt,
+.hero-one-txt {
+  margin: 3rem 0;
+  padding: 3rem 0;
+}
 .hero-one-img {
-  padding: 0 0.75rem;
+  margin-right: .75rem;
 }
 
 .hero-one-img {
@@ -101,6 +129,7 @@ p {
 
 .wca-head {
   padding: 0 0 0 30px;
+  width: 60%;
 }
 
 .wca-img-block {
@@ -113,18 +142,66 @@ p {
 }
 
 .dca-head {
-    padding: 30px;
-    background-color: #f95474;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
+  padding: 30px;
+  background-color: #f95474;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
 }
 
 .dca-img-block {
-    background-color: #353b40;
-    padding: 20px;
-    text-align: center;
-    width: 50%;
+  background-color: #353b40;
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+}
+
+.wcc {
+  background-color: #56c1b0;
+  color: #fff;
+}
+
+@media screen and (min-width: 1201px) {
+  .container {
+    max-width: 1160px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 0 .75rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin: 0 .75rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-one-img {
+    display: none;
+  }
+  .hero-one-txt {
+    max-width: initial;
+    margin: 0 .75rem;
+  }
+
+}
+
+@media screen and (max-width: 360px) {
+  .m360 {
+    display: block;
+  }
+  .dca-head {
+    padding: 15px 20px;
+    display: block;
+    width: inherit;
+  }
+  .dca-img-block {
+    padding: 15px;
+    width: inherit;
+  }
 }

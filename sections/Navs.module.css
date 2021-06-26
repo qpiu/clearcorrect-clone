@@ -17,26 +17,36 @@
 
 @media screen and (max-width: 960px) {
   .navWrapper {
+    padding: 0 0.75rem;
+    background-color: #c5cbd0;
   }
   .navList {
     display: block;
     display: block;
     max-height: 0;
     overflow: hidden;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     z-index: 10;
+  }
+  .navWrapper button {
+    color: #fff;
+    padding: 12px;
+  }
+  .navWrapper button i {
+    margin-right: 0.5rem;
   }
   .toggleButton {
     display: block;
   }
   .navList.open {
-      max-height: 30em !important;
+    max-height: 30em !important;
   }
-
+  .navList.open {
+  }
+  .navList li {
+    padding: 0 10px 16px 10px;
+  }
+  .navList li a {
+    color: #fff;
+  }
 }
-
-
