@@ -190,10 +190,12 @@ p {
 .blogs {
   display: flex;
   width: 75%;
+  flex-wrap: wrap;
 }
 
 .blog {
   width: 50%;
+  margin-bottom: 40px;
 }
 
 .blog-side {
