@@ -3,19 +3,20 @@ import { Loader } from '@googlemaps/js-api-loader';
 import { GOOG_MAPS_API_KEY } from '../lib/constants';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { makeStyles } from "@material-ui/core/styles";
 
 const loader = new Loader( {
     apiKey: `${ GOOG_MAPS_API_KEY }`,
     version: "weekly",
-    libraries: [ "places" ]
+    libraries: [ "places", "drawing", "geometry" ]
 } )
 
-export default function MapSearchBar ( props ) {
-    const [ search, setSearch ] = useState( [] )
+export default function MapSearchBar ( { searchHandler } ) {
+    const [ searchOpt, setSearchOpt ] = useState( { radius: "5", results: "10" } );
+    const [ autocompleteService, setAutoCompl ] = useState( null );
+    const [ predictions, setPredictions ] = useState( [] );
     // material-ui controls
-    const [ value, setValue ] = useState( '' );
-    const [ inputValue, setInputValue ] = useState( '' );
+    const [ location, setLocation ] = useState( '' );
+    //const [ inputValue, setInputValue ] = useState( '' );
 
     useEffect( () => {
         let mounted = true;
@@ -23,7 +24,7 @@ export default function MapSearchBar ( props ) {
             loader
                 .load()
                 .then( ( google ) => {
-                    setSearch( { ...search, autocompleteService: new google.maps.places.AutocompleteService(), placePredictions: [] } );
+                    setAutoCompl( new google.maps.places.AutocompleteService() );
                 } )
                 .catch( ( e ) => console.log( e ) )
         }
@@ -32,18 +33,22 @@ export default function MapSearchBar ( props ) {
         };
     }, [] );
 
+    useEffect( () => {
+        console.log( location )
+    }, [ location ] )
+
     const onPlaceChanged = ( value ) => {
-        if ( search.autocomplete !== null ) {
-            console.log( `location: ${ value }` )
-            search.autocompleteService.getPlacePredictions( { input: value } )
+        if ( autocompleteService !== null ) {
+            //setInputValue( value )
+            autocompleteService.getPlacePredictions( { input: value } )
                 .then( ( res ) => {
-                    console.log( res );
+                    //console.log( res );
                     let predictions = res.predictions.map( ( p ) => p.description )
-                    setSearch( { ...search, placePredictions: predictions } )
+                    setPredictions( predictions )
                 } )
                 .catch( ( e ) => console.log( e ) )
 
-            setSearch( { ...search, location: value } )
+
         } else {
             console.log( 'Autocomplete is not loaded yet!' )
         }
@@ -54,37 +59,37 @@ export default function MapSearchBar ( props ) {
             <Autocomplete
                 id="free-solo-demo"
                 freeSolo
-                options={ search.placePredictions || [] }
-                onChange={ ( event, newValue ) => {
-                    setValue( newValue );
+                options={ predictions || [] }
+                onChange={ ( event, loc ) => {
+                    setLocation( loc );
                 } }
                 onInputChange={ ( event, newInputValue ) => {
                     onPlaceChanged( newInputValue );
                 } }
                 renderInput={ ( params ) => (
-                    <TextField { ...params } label="freeSolo" margin="normal" variant="outlined" />
+                    <TextField { ...params } label="Your location" margin="normal" />
                 ) }
             />
-            <p>
-                <span>
+            <p style={ { margin: '0 auto' } }>
+                <span style={ { width: '80px', margin: '5px' } }>
                     <label htmlFor="radius">Search radius: </label>
-                    <select id="radius" name="search[radius]" value={ search.radius || '' } onChange={ e => setSearch( { ...search, radius: e.target.value } ) }>
-                        <option value="5km">5 km</option>
-                        <option value="10km">10 km</option>
-                        <option value="25km">25 km</option>
-                        <option value="50km">50km</option>
+                    <select id="radius" name="searchOpt[radius]" value={ searchOpt.radius } onChange={ e => setSearchOpt( { ...searchOpt, radius: e.target.value } ) }>
+                        <option value="5">5 km</option>
+                        <option value="10">10 km</option>
+                        <option value="25">25 km</option>
+                        <option value="50">50km</option>
                     </select>
                 </span>
-                <span>
+                <span style={ { width: '80px', margin: '5px' } }>
                     <label htmlFor="results">Results: </label>
-                    <select id="results" name="search[results]" value={ search.results || '' } onChange={ e => setSearch( { ...search, results: e.target.value } ) }>
-                        <option value="10res">10</option>
-                        <option value="20res">20</option>
-                        <option value="50res">50</option>
+                    <select id="results" name="searchOpt[results]" value={ searchOpt.results } onChange={ e => setSearchOpt( { ...searchOpt, results: e.target.value } ) }>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
                     </select>
                 </span>
 
-                <button>Find</button>
+                <button style={ { width: '80px', margin: '5px' } } onClick={ ( e ) => searchHandler( e, { ...searchOpt, locaion: location } ) }>Find</button>
             </p>
         </div>
     )
