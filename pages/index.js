@@ -1,80 +1,129 @@
-import Head from "next/head";
-import WcaList from "../sections/WcaList";
-import ScrollAnimation from "react-animate-on-scroll";
-import Testimonies from "../sections/Testimonies";
-import Wccs from "../sections/Wccs";
-import Hero from "../sections/Hero";
-import HeroBelt from "../sections/HeroBelt";
+import React from "react";
+import Carousel from "../components/Carousel";
+import IndexBelt from "../sections/IndexBelt";
 
-export default function Home () {
+const whoweare = () => {
   return (
     <div>
-      <Head>
-        <title>ClearCorrect</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <Hero title="Who We Are" page="whoweare"></Hero>
+      <IndexBelt></IndexBelt>
+      <Carousel></Carousel>
+      <section class="ftco-section ftco-no-pt ftco-no-pb" id="section2">
+        <div class="container-xl">
+          <div class="row g-xl-5">
+            <div class="col-md-12 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+              <div class="mt-0 my-lg-4 py-4">
+                <span class="subheading">Learn Anything</span>
+                <h2 class="mb-2">We Offer Best Dental Services</h2>
+                <div class="row mt-4 g-lg-2">
+                  <div class="col-lg-4 d-flex align-items-stretch services-wrap">
+                    <div class="services d-flex">
+                      <div class="icon">
+                        <span class="flaticon-online-booking"></span>
+                      </div>
+                      <div class="text">
+                        <h2>Easy Booking</h2>
+                        <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      </div>
+                    </div>
+                  </div>
 
-        <HeroBelt></HeroBelt>
+                  <div class="col-lg-4 d-flex align-items-stretch services-wrap">
+                    <div class="services d-flex">
+                      <div class="icon">
+                        <span class="flaticon-dentist"></span>
+                      </div>
+                      <div class="text">
+                        <h2>Team Dentist</h2>
+                        <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      </div>
+                    </div>
+                  </div>
 
-        <ScrollAnimation animateIn="fadeIn">
-          <div className="container">
-            <div className="flex">
-              <div className="hero-one-img"></div>
-              <div className="hero-one-txt">
-                <h1>Hey! We’re ClearCorrect</h1>
-                <h3>Nice to meet you.</h3>
-                <p>ClearCorrect™ was founded back in 2006 by a dentist – Dr. Willis Pumphrey, who had over 400 patients that needed to finish their clear aligner treatment, but no one to make the aligners for them.</p>
-                <p>So, Dr. Willis Pumphrey went the extra mile for his patients! He founded ClearCorrect™ to make aligners for his patients. He treated his 400 patients successfully with Clear Aligners with great results!</p>
-                <p>One by one, other dentists signed up to try Dr. Willis Pumphrey’s solution, and ClearCorrect was founded and started to grow.</p>
-                <p>Today, we have served tens of thousands of dentists all over the world and have delivered literally millions of aligners to our customers. Through it all, we’ve made it our priority to listen to our customers, and to put your needs first. That’s what’s kept us going for 15 years, and that’s how we know we’ll always be here.</p>
-                <p>We are ClearCorrect – Clear. Simple. Friendly.</p>
+                  <div class="col-lg-4 d-flex align-items-stretch services-wrap">
+                    <div class="services d-flex">
+                      <div class="icon">
+                        <span class="flaticon-offer"></span>
+                      </div>
+                      <div class="text">
+                        <h2>Best Price Guarantee</h2>
+                        <p class="mb-0">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
-          <section className="ftca-section">
-            <div className="container flex">
-              <div className="wca-img-block"></div>
-              <div className="wca-head">
-                <h2>why choose clear aligners?</h2>
-                <p>If you’re not completely happy with your smile, but aren’t a big fan of metal braces, clear aligners might be just the thing for you as they are:</p>
-                <WcaList></WcaList>
+        </div>
+      </section>
+      <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container-xl">
+          <div class="row g-xl-5">
+            <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+              <div class="img w-100" style={{backgroundImage: `url('./assets/about.jpeg')`}}></div>
+            </div>
+            <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+              <div class="mt-0 my-lg-5 py-5">
+                <p>
+                  {" "}
+                  <span class="subheading">Welcome to our Dental Clinic</span>
+                </p>
+                <h2 class="mb-2">ClearCorrect is a Dental Clinic and Innovative Approach to Treatment</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                <div class="row section-counter mt-5 viewed">
+                  <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                      <div class="icon">
+                        <span class="flaticon-affection"></span>
+                      </div>
+                      <div class="text">
+                        <h2 class="number">
+                          <span class="countup">3,000</span>
+                        </h2>
+                        <span class="caption">Happy Patients</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                      <div class="icon">
+                        <span class="flaticon-gum"></span>
+                      </div>
+                      <div class="text">
+                        <h2 class="number">
+                          <span class="countup">2,200</span>
+                        </h2>
+                        <span class="caption">Performed Treatments</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
+                    <div class="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                      <div class="icon">
+                        <span class="flaticon-calendar"></span>
+                      </div>
+                      <div class="text">
+                        <h2 class="number">
+                          <span class="countup">24</span>
+                        </h2>
+                        <span class="caption">Year of Experienced</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
-        </ScrollAnimation>
-
-        <ScrollAnimation animateIn="fadeIn">
-          <section className="ftca-section">
-            <div className="container flex m360">
-              <div className="dca-head">
-                <h2>How do clear aligners work?</h2>
-                <p>Based on your doctor’s prescription, we start working on your customised treatment plan using advance technology in order to create your unique, custom clear aligners that apply targeted pressure to your teeth to slowly move them into alignment.</p>
-              </div>
-              <div className="dca-img-block">
-                <img src="./assets/teeth_flow.png" />
-              </div>
-            </div>
-          </section>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
-          <section className="ftca-section"></section>
-          <div className="container flex">
-            <Testimonies></Testimonies>
           </div>
-        </ScrollAnimation>
+        </div>
+      </section>
 
-        <ScrollAnimation animateIn="fadeIn">
-          <section className="ftca-section wcc">
-            <div className="container flex">
-              <Wccs></Wccs>
-            </div>
-          </section>
-        </ScrollAnimation>
-      </main>
+      <div class="map_section1">
+        <div class="container1">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.519192080184!2d-70.97080018504853!3d42.096350159707654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e49b6e4db7ff99%3A0xf4a86f887a74bcd6!2s777%20Brockton%20Ave%2C%20Abington%2C%20MA%2002351%2C%20USA!5e0!3m2!1sen!2sin!4v1616587362158!5m2!1sen!2sin" width="100%" height="450" style={{border: '0', allowFullScreen: " ", loading:"lazy"}}></iframe>{" "}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default whoweare;
