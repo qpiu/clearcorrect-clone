@@ -39,6 +39,14 @@ export default function Contact() {
           </div>
         </div>
         <ContactForm />
+
+        <div className="social-media mt-5">
+            <h3>Follow Us Here</h3>
+            <p>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </p>
+        </div>
       </div>
     </div>
   );

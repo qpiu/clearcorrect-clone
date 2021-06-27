@@ -1,0 +1,49 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?f8ee59c19b52c56ac5f3adf1e3dda4a6") format("truetype"),
+url("./flaticon.woff?f8ee59c19b52c56ac5f3adf1e3dda4a6") format("woff"),
+url("./flaticon.woff2?f8ee59c19b52c56ac5f3adf1e3dda4a6") format("woff2"),
+url("./flaticon.eot?f8ee59c19b52c56ac5f3adf1e3dda4a6#iefix") format("embedded-opentype"),
+url("./flaticon.svg?f8ee59c19b52c56ac5f3adf1e3dda4a6#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "online-booking": "\f101",
+    "dental-care": "\f102",
+    "calendar": "\f103",
+    "affection": "\f104",
+    "dentist": "\f105",
+    "offer": "\f106",
+);
+
+.flaticon-online-booking:before {
+    content: map-get($flaticon-map, "online-booking");
+}
+.flaticon-dental-care:before {
+    content: map-get($flaticon-map, "dental-care");
+}
+.flaticon-calendar:before {
+    content: map-get($flaticon-map, "calendar");
+}
+.flaticon-affection:before {
+    content: map-get($flaticon-map, "affection");
+}
+.flaticon-dentist:before {
+    content: map-get($flaticon-map, "dentist");
+}
+.flaticon-offer:before {
+    content: map-get($flaticon-map, "offer");
+}
