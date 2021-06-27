@@ -18,6 +18,7 @@
 .links,
 .contact {
   padding: 0.75rem;
+  color: #fff;
 }
 
 .widget {
@@ -26,6 +27,13 @@
 
 .widget h2 {
   margin-bottom: 40px;
+}
+
+.widget h2 a,
+.widget p,
+.links h2,
+.contact h2 {
+  color: #fff;
 }
 
 .widget h2 a {
