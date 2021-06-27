@@ -7,7 +7,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 const loader = new Loader( {
     apiKey: `${ GOOG_MAPS_API_KEY }`,
     version: "weekly",
-    libraries: [ "places" ]
+    libraries: [ "places", "drawing", "geometry" ]
 } )
 
 export default function MapSearchBar ( { searchHandler } ) {
