@@ -232,6 +232,20 @@ p {
   color: #57c2b1;
 }
 
+.social-media p a {
+  color: #57C2B1;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.social-media h3 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+}
+
 @media (min-width: 360px) {
   .container {
     padding: 0 0.75rem;

@@ -85,7 +85,7 @@ export default function Blog(props) {
             <div className="blog-side">i am blog side</div>
           </div>
         </div>
-        <div>
+        <div className="flex flex-justufy-center">
           <Pagination currentPage={page} setPageFromChild={setPageFromChild} goNext={goNext} goLast={goLast} goPrev={goPrev} goTop={goTop} pageNum={Math.ceil(pageNum)} />
         </div>
       </main>
