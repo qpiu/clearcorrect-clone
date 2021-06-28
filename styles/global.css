@@ -30,7 +30,6 @@ h5,
 h6,
 p {
   margin-bottom: 1rem;
-  color: rgba(0, 0, 0, .8);
 }
 
 .ftca-section {
@@ -40,11 +39,15 @@ p {
   overflow-x: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .flex {
   display: flex;
 }
 
-.flex-justify-center {
+.justufy-content-center {
   justify-content: center;
 }
 

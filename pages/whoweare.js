@@ -1,12 +1,13 @@
 import Head from "next/head";
 import WcaList from "../sections/WcaList";
-import ScrollAnimation from "react-animate-on-scroll";
 import Testimonies from "../sections/Testimonies";
 import Wccs from "../sections/Wccs";
 import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
 
-export default function Home () {
+import Fade from "react-reveal/Fade";
+
+export default function Home() {
   return (
     <div>
       <Head>
@@ -18,7 +19,7 @@ export default function Home () {
 
         <HeroBelt></HeroBelt>
 
-        <ScrollAnimation animateIn="fadeIn">
+        <Fade bottom>
           <div className="container">
             <div className="flex">
               <div className="hero-one-img"></div>
@@ -33,8 +34,8 @@ export default function Home () {
               </div>
             </div>
           </div>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
+        </Fade>
+        <Fade bottom>
           <section className="ftca-section">
             <div className="container flex">
               <div className="wca-img-block"></div>
@@ -45,9 +46,9 @@ export default function Home () {
               </div>
             </div>
           </section>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="fadeIn">
+        <Fade bottom>
           <section className="ftca-section">
             <div className="container flex m360">
               <div className="dca-head">
@@ -59,21 +60,19 @@ export default function Home () {
               </div>
             </div>
           </section>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn">
+        </Fade>
+        <Fade bottom>
           <section className="ftca-section"></section>
           <div className="container flex">
             <Testimonies></Testimonies>
           </div>
-        </ScrollAnimation>
+        </Fade>
 
-        <ScrollAnimation animateIn="fadeIn">
-          <section className="ftca-section wcc">
-            <div className="container flex">
-              <Wccs></Wccs>
-            </div>
-          </section>
-        </ScrollAnimation>
+        <section className="ftca-section wcc">
+          <div className="container flex">
+            <Wccs></Wccs>
+          </div>
+        </section>
       </main>
     </div>
   );

@@ -1,3 +1,7 @@
+.testimoniesWrap {
+    padding-bottom: 5rem;
+}
+
 .txtWrap {
     display: flex;
     flex-direction: column;
