@@ -33,9 +33,9 @@ export default function MapSearchBar ( { searchHandler } ) {
         };
     }, [] );
 
-    useEffect( () => {
-        console.log( location )
-    }, [ location ] )
+    // useEffect( () => {
+    //     console.log( location )
+    // }, [ location ] )
 
     const onPlaceChanged = ( value ) => {
         if ( autocompleteService !== null ) {
@@ -89,7 +89,7 @@ export default function MapSearchBar ( { searchHandler } ) {
                     </select>
                 </span>
 
-                <button style={ { width: '80px', margin: '5px' } } onClick={ ( e ) => searchHandler( e, { ...searchOpt, locaion: location } ) }>Find</button>
+                <button style={ { width: '80px', margin: '5px' } } onClick={ ( e ) => searchHandler( e, { ...searchOpt, location: location } ) }>Find</button>
             </p>
         </div>
     )
