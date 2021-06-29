@@ -21,13 +21,22 @@ const centerTW = {
     lng: 121
 };
 
-const HandleSearchSubmit = ( e, searchOpt ) => {
-    e.preventDefault();
-    console.log( searchOpt )
+const calcDistance = ( p1, p2 ) => {
+    var R = 6371; // Radius of the Earth in km
+    var rlat1 = p1.lat * ( Math.PI / 180 ); // Convert degrees to radians
+    var rlat2 = p2.lat * ( Math.PI / 180 ); // Convert degrees to radians
+    var difflat = rlat2 - rlat1; // Radian difference (latitudes)
+    var difflon = ( p2.lng - p1.lng ) * ( Math.PI / 180 ); // Radian difference (longitudes)
+
+    var d = 2 * R * Math.asin( Math.sqrt( Math.sin( difflat / 2 ) * Math.sin( difflat / 2 ) + Math.cos( rlat1 ) * Math.cos( rlat2 ) * Math.sin( difflon / 2 ) * Math.sin( difflon / 2 ) ) );
+    //console.log( `d = ${ d }` )
+    return d;
 }
 
 export default function Map ( { providers } ) {
     const [ mapOpt, setmapOpt ] = useState( { center: centerTW, zoom: 9 } );
+    const [ geocoder, setGeocoder ] = useState( null );
+    const [ searchResults, setSearchResults ] = useState( [] )
 
     // get user position
     useEffect( () => {
@@ -42,6 +51,31 @@ export default function Map ( { providers } ) {
         }
     }, [] );
 
+    const HandleSearchSubmit = ( e, searchOpt ) => {
+        e.preventDefault();
+        //console.log( searchOpt );
+        let userLatLng = null;
+        geocoder.geocode( { 'address': searchOpt.location }, function ( results, status ) {
+            if ( status == 'OK' ) {
+                //console.log( results );
+                userLatLng = {
+                    lat: results[ 0 ].geometry.location.lat(),
+                    lng: results[ 0 ].geometry.location.lng()
+                };
+                let searchRes = []
+                providers.map( ( p ) => {
+                    if ( calcDistance( p.latLng, userLatLng ) < searchOpt.radius ) {
+                        searchRes.push( p )
+                    }
+                } )
+                console.log( searchRes );
+                setSearchResults( searchRes );
+            } else {
+                console.log( 'Geocode was not successful for the following reason: ' + status );
+            }
+        } );
+    }
+
     // load map
     useEffect( () => {
         let mounted = true;
@@ -50,6 +84,7 @@ export default function Map ( { providers } ) {
                 .load()
                 .then( ( google ) => {
                     let map = new google.maps.Map( document.getElementById( "map" ), mapOpt )
+                    setGeocoder( new google.maps.Geocoder() );
                     providers.forEach( p => {
                         //console.log( p );
                         new google.maps.Marker( {
@@ -70,7 +105,7 @@ export default function Map ( { providers } ) {
         <div>
             <MapSearchBar searchHandler={ HandleSearchSubmit } />
             <div style={ { display: 'flex', width: '80%', margin: '0 auto' } }>
-                <MapSearchResults results={ [ 'test1', 'test2' ] } />
+                <MapSearchResults results={ searchResults } />
                 <div id="map" style={ mapStyle }></div>
             </div>
         </div>
