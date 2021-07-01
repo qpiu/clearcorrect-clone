@@ -33,7 +33,7 @@ p {
 }
 
 .ftca-section {
-  padding: 5rem 0;
+  padding: 2.5rem 0;
   position: relative;
   width: 100%;
   overflow-x: hidden;
@@ -49,6 +49,10 @@ p {
 
 .justufy-content-center {
   justify-content: center;
+}
+
+.align-item-center {
+  align-items: center;
 }
 
 .center {
@@ -189,12 +193,9 @@ p {
   line-height: 1.4;
 }
 
-
 .heading-section p {
-  color: #999
+  color: #999;
 }
-
-
 
 .section-counter .counter-wrap-2 {
   width: 100%;
@@ -216,7 +217,7 @@ p {
 }
 
 .hero-one-txt {
-  max-width: 50%;
+  width: 50%;
 }
 
 .hero-one-txt h1 {
@@ -268,6 +269,11 @@ p {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.square {
+  border-radius: 0;
+  background: none;
+}
+
 .social-icon span {
   position: absolute;
   font-size: 24px;
@@ -277,6 +283,10 @@ p {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #fff !important;
+}
+
+.pink i {
+  color: #f95474;
 }
 
 .wca-head {
@@ -505,26 +515,37 @@ ul.stepper .step.done:before {
   font-family: "Material Icons";
 }
 
-ul.stepper .step.active:before,
-ul.stepper .step.done:before {
+.step.active:before,
+.step.done:before {
   background-color: #57c2b1;
 }
 
-ul.stepper .step-actions {
+.step-actions {
   padding-top: 16px;
   display: flex;
   justify-content: center;
 }
 
-ul.stepper .step-actions .btn:not(:last-child),
-ul.stepper .step-actions .btn-flat:not(:last-child),
-ul.stepper .step-actions .btn-large:not(:last-child) {
+.step-actions .btn:not(:last-child),
+.step-actions .btn-flat:not(:last-child),
+.step-actions .btn-large:not(:last-child) {
   margin-right: 5px;
 }
 
 .step {
   position: relative;
   margin-bottom: 10px;
+}
+
+.step .step-content {
+  opacity: 0;
+  transition: all 1s;
+  max-height: 0;
+}
+
+.step.active .step-content {
+  opacity: 1;
+  max-height: 100%;
 }
 
 ul.stepper .step-title {
@@ -633,18 +654,18 @@ ul.stepper .step-title {
 }
 
 .gender-radio input[type="radio"]:hover + .gender-radio-label {
-  border-color: #f95474;
+  border-color: #57c2b1;
 }
 
 .gender-radio input[type="radio"]:checked + .gender-radio-label {
-  border-color: #f95474;
+  border-color: #57c2b1;
 }
 
 .step-actions .next-step {
   text-transform: uppercase;
   font-size: 13px;
   font-family: "thesansb6_semibold";
-  background: #f95474;
+  background: #57c2b1;
   padding: 12px;
   color: #fff;
   border-radius: 0;
@@ -804,5 +825,46 @@ ul.stepper .step-title {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section-counter .counter-wrap-2 {
+    margin-bottom: 20px !important;
+  }
+  .social-icon.top {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-block {
+    display: block;
+  }
+  .hero-one-img {
+    display: none;
+  }
+  .hero-one-txt {
+    width: 100%;
+    margin: 0;
+  }
+  .ftca-section {
+    padding: 1rem 0;
+  }
+  .wca-img-block {
+    width: 100%;
+  }
+  .wca-head {
+    width: 100%;
+    padding: 0;
+    margin-top: 2rem;
+  }
+  .contact-us-wrap {
+    width: inherit;
+    margin: 3rem 1rem;
+    padding: 1rem;
+  }
+  .row {
+    display: block;
   }
 }

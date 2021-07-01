@@ -6,8 +6,6 @@ const title = [
   { title: "ClearCorrect", href: "/" },
   { title: "Your ClearCorrect Journey", href: "/journey" },
   { title: "Health and Orthodontics", href: "/blog" },
-  { title: "Find Your Provider", href: "/providers" },
-  { title: "Smile Check", href: "/test" },
   { title: "Get in Touch", href: "/contact" },
 ];
 

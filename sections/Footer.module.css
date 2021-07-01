@@ -77,7 +77,25 @@
   margin: 0.5rem 0 1rem 0;
 }
 
+.socialList li {
+  margin-right: 5px;
+}
+
 .copyRight {
   padding: 3rem 0;
   text-align: center;
+}
+
+
+@media screen and (max-width: 767px) {
+  .footer {
+    display: block;
+  }
+  .links {
+    width: 100%;
+  }
+  .links ul{
+    margin: 0;
+    padding: 0;
+  }
 }

@@ -21,7 +21,7 @@ export default function Home() {
 
         <Fade bottom>
           <div className="container">
-            <div className="flex">
+            <div className="flex mobile-block">
               <div className="hero-one-img"></div>
               <div className="hero-one-txt">
                 <h1>Hey! We’re ClearCorrect</h1>
@@ -37,7 +37,7 @@ export default function Home() {
         </Fade>
         <Fade bottom>
           <section className="ftca-section">
-            <div className="container flex">
+            <div className="container flex mobile-block">
               <div className="wca-img-block"></div>
               <div className="wca-head">
                 <h2>why choose clear aligners?</h2>

@@ -12,7 +12,7 @@ export default function Contact() {
         <h3>Contact us</h3>
         <p>We're open for any suggestion or just to have a chat</p>
 
-        <div className="row flex">
+        <div className="row flex mobile-block">
           <div className="col">
             <div className="contact-box">
               <p>

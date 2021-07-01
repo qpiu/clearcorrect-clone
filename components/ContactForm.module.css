@@ -1,5 +1,20 @@
-.btnBlock button{
-     background-color: #57c2b1;
-     color: #fff;
-     margin-top: 1rem;
+.btnBlock button {
+  background-color: #57c2b1;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.formWrap {
+  transition: all 0.5s linear;
+}
+
+.show {
+  display: block;
+  max-height: 100%;
+  margin: 2rem 0;
+}
+
+.hidden {
+  opacity: 0;
+  max-height: 0;
 }

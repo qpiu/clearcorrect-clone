@@ -1,6 +1,5 @@
 import Head from "next/head";
 import WcaList from "../sections/WcaList";
-import ScrollAnimation from "react-animate-on-scroll";
 import Testimonies from "../sections/Testimonies";
 import Wccs from "../sections/Wccs";
 import Hero from "../sections/Hero";
@@ -20,9 +19,7 @@ export default function journey() {
 
         <HeroBelt></HeroBelt>
 
-        <ScrollAnimation animateIn="fadeIn">
           <Steps></Steps>
-        </ScrollAnimation>
       </main>
     </div>
   );

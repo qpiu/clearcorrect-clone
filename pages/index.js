@@ -7,6 +7,9 @@ const whoweare = () => {
     <div>
       <IndexBelt></IndexBelt>
       <Carousel></Carousel>
+
+    i am news
+
       <section class="ftco-section ftco-no-pt ftco-no-pb" id="section2">
         <div class="container-xl">
           <div class="row g-xl-5">

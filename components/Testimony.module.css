@@ -60,3 +60,9 @@
   font-size: 30px;
   color: #57c2b1;
 }
+
+@media screen and (max-width: 767px) {
+  .testimonyWrap {
+    min-width: 90%;
+  }
+}

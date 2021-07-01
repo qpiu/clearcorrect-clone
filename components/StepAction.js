@@ -1,9 +1,9 @@
 import React from "react";
 
-const StepAction = () => {
+const StepAction = (props) => {
   return (
     <div className="step-actions">
-      <button type="submit" name="submit" onclick="AddContact1();" class="waves-effect waves-dark btn next-step">
+      <button onClick={props.clicked} class="waves-effect waves-dark btn next-step">
         CONTINUE
       </button>
       <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>

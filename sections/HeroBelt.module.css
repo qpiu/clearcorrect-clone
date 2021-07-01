@@ -55,4 +55,11 @@
   .btnWrap {
     width: initial;
   }
+  .txtWrap {
+    width: 100%;
+  }
+
+  .txtWrap h1 {
+    margin-bottom: 3rem;
+  }
 }

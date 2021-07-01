@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.stepUl {
+  padding: 0;
+}
+
 .stepTxt > div {
   padding-right: 30px;
 }

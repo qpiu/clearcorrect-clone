@@ -14,13 +14,16 @@ const Testimonies = () => {
   return (
     <div className={styles.testimoniesWrap}>
       <Fade>
+          <div className="container">
+
         <div className={styles.txtWrap}>
           <h2>What can clear aligners do for me?</h2>
           <p>Straighter teeth don’t just look better; they work better too. Poorly-aligned teeth can interfere with bite function, can wear out faster, and are more prone to cavities. And once you’ve got a smile you love, you may just find you can’t help but show it off.</p>
         </div>
+        </div>
       </Fade>
       <Fade>
-        <div className="flex">
+        <div className={`flex ${styles.testimonies}`}>
           {testimony.map((el, i) => {
             return <Testimony key={i} el={el} />;
           })}

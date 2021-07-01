@@ -1,0 +1,23 @@
+.questionWrap {
+}
+
+.choiceWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.choiceWrap li {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin-right: 15px;
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-size: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: #fff;
+}
