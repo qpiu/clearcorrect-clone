@@ -4,7 +4,6 @@ import IndexBelt from "../sections/IndexBelt";
 import CountUp from "../components/Countup";
 
 const whoweare = () => {
-  const [count, setCount] = useState(0);
   return (
     <div>
       <IndexBelt></IndexBelt>
@@ -81,7 +80,7 @@ const whoweare = () => {
                       </div>
                       <div class="text">
                         <h2 class="number">
-                          <span class="countup">3,000</span>
+                          <CountUp number={3000}></CountUp>
                         </h2>
                         <span class="caption">Happy Patients</span>
                       </div>
@@ -94,7 +93,7 @@ const whoweare = () => {
                       </div>
                       <div class="text">
                         <h2 class="number">
-                          <span class="countup">2,200</span>
+                          <CountUp number={2200}></CountUp>
                         </h2>
                         <span class="caption">Performed Treatments</span>
                       </div>
@@ -107,7 +106,7 @@ const whoweare = () => {
                       </div>
                       <div class="text">
                         <h2 class="number">
-                          <span class="countup">24</span>
+                          <CountUp number={24}></CountUp>
                         </h2>
                         <span class="caption">Year of Experienced</span>
                       </div>
