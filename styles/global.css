@@ -59,6 +59,10 @@ p {
   text-align: center;
 }
 
+.long {
+  padding-top: 3rem;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -185,12 +189,14 @@ p {
   font-family: "thesansb7_bold";
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-weight: 700;
 }
 
 .heading-section h2 {
   font-size: 38px;
   font-family: "thesansb6_semibold";
   line-height: 1.4;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .heading-section p {
@@ -825,6 +831,13 @@ ul.stepper .step-title {
   margin-bottom: 0;
 }
 
+.sidebar-box h3 {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
 .block-21 .text {
   width: calc(100% - 90px);
 }
@@ -834,9 +847,7 @@ ul.stepper .step-title {
     max-width: 720px;
     padding: 0 0.75rem;
   }
-  .hero-one-img {
-    display: none;
-  }
+
   .hero-one-txt {
     max-width: initial;
     margin: 0 0.75rem;
@@ -899,5 +910,34 @@ ul.stepper .step-title {
   }
   .row {
     display: block;
+  }
+  .hero-one-img {
+    display: none;
+  }
+  .slider h1 {
+    font-size: 40px;
+  }
+  .slider-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+    height: 100%;
+  }
+  .long {
+    padding-top: 0;
+  }
+  .blogs {
+    width: 100%;
+  }
+  .blog {
+    width: 100%;
+  }
+  .blog-side {
+    width: 100%;
   }
 }

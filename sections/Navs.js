@@ -9,18 +9,18 @@ const title = [
   { title: "Get in Touch", href: "/contact" },
 ];
 
-export default function Navs () {
-  const [ toggle, setToggle ] = useState( false );
+export default function Navs(props) {
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <ul className={ styles.navWrapper }>
-      <button onClick={ () => setToggle( toggle => !toggle ) } className={ styles.toggleButton }>
+    <ul className={styles.navWrapper}>
+      <button onClick={() => setToggle((toggle) => !toggle)} className={styles.toggleButton}>
         <i className="fas fa-list"></i>Menu
       </button>
-      <div className={ toggle ? `${ styles.navList } ${ styles.open }` : styles.navList }>
-        { title.map( ( el, i ) => {
-          return <Nav el={ el } key={ i }></Nav>;
-        } ) }
+      <div className={toggle ? `${styles.navList} ${styles.open}` : styles.navList}>
+        {title.map((el, i) => {
+          return <Nav active={props.currentRoute === el.href} el={el} key={i}></Nav>;
+        })}
       </div>
     </ul>
   );

@@ -5,9 +5,11 @@ import Navs from "../sections/Navs";
 import Top from "../sections/Top";
 import SideButton from "../sections/SideButton";
 import Footer from "../sections/Footer";
+import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps }) {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const router = useRouter()
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition(position);
@@ -31,7 +33,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <content>
         <Top></Top>
-        <Navs />
+        <Navs currentRoute={router.asPath} />
         <Component {...pageProps} />
 
         <Footer></Footer>
