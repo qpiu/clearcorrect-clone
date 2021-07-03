@@ -3,12 +3,11 @@ import Carousel from "../components/Carousel";
 import IndexBelt from "../sections/IndexBelt";
 
 const whoweare = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
       <IndexBelt></IndexBelt>
       <Carousel></Carousel>
-
-    i am news
 
       <section class="ftco-section ftco-no-pt ftco-no-pb" id="section2">
         <div class="container-xl">
@@ -63,7 +62,7 @@ const whoweare = () => {
         <div class="container-xl">
           <div class="row g-xl-5">
             <div class="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-              <div class="img w-100" style={{backgroundImage: `url('./assets/about.jpeg')`}}></div>
+              <div class="img w-100" style={{ backgroundImage: `url('./assets/about.jpeg')` }}></div>
             </div>
             <div class="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
               <div class="mt-0 my-lg-5 py-5">
@@ -122,7 +121,7 @@ const whoweare = () => {
 
       <div class="map_section1">
         <div class="container1">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.519192080184!2d-70.97080018504853!3d42.096350159707654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e49b6e4db7ff99%3A0xf4a86f887a74bcd6!2s777%20Brockton%20Ave%2C%20Abington%2C%20MA%2002351%2C%20USA!5e0!3m2!1sen!2sin!4v1616587362158!5m2!1sen!2sin" width="100%" height="450" style={{border: '0', allowFullScreen: " ", loading:"lazy"}}></iframe>{" "}
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.519192080184!2d-70.97080018504853!3d42.096350159707654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e49b6e4db7ff99%3A0xf4a86f887a74bcd6!2s777%20Brockton%20Ave%2C%20Abington%2C%20MA%2002351%2C%20USA!5e0!3m2!1sen!2sin!4v1616587362158!5m2!1sen!2sin" width="100%" height="450" style={{ border: "0", allowFullScreen: " ", loading: "lazy" }}></iframe>{" "}
         </div>
       </div>
     </div>
