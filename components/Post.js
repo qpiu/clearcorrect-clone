@@ -27,7 +27,6 @@ export default function Post ( { post } ) {
     <div className={ styles.post }>
       <div className={ styles.border }>
         <a className={ styles.blogEntry } style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } } href={ `/post/${ post.id }` }></a>
-        {/* <img className="excerpt-img mb-5" src={postImgAndAuthor ? postImgAndAuthor.featImgUrl : "/aeeiee-logo.png"} /> */ }
 
         <div className={ styles.postTxt }>
           <div className="flex">
