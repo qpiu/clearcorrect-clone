@@ -1,3 +1,8 @@
+.testimoniesWrap {
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
 .txtWrap {
     display: flex;
     flex-direction: column;
@@ -16,5 +21,9 @@
 @media screen and (max-width: 767px) {
     .txtWrap {
         width: 100%;
+    }
+    .testimonies {
+        width: 100%;
+        overflow: scroll;
     }
 }

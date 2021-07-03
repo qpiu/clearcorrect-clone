@@ -1,19 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import StepAction from "../components/StepAction";
 import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
 
 const test = () => {
+  const [active, setActive] = useState(0);
   return (
     <div>
       <Hero title="Smile Check" page="journey"></Hero>
       <HeroBelt></HeroBelt>
       <section className="ftca-section">
         <div className="container">
-          <form name="smilechk">
+          <div name="smilechk">
             <ul className="stepper">
-              <li className="step step1">
-                <div className="step-title">I am</div>
+              <li className={`step step1 ${active === 0 ? "active" : "done"}`}>
+                <div onClick={() => setActive(0)} className="step-title">I am</div>
                 <div className="step-content">
                   <div className="gender-radio-item-row">
                     <div className="gender-radio">
@@ -25,12 +26,11 @@ const test = () => {
                       <label for="gender-radio-female" class="gender-radio-label female-image"></label>
                     </div>
                   </div>
+                  <StepAction clicked={() => setActive(1)}></StepAction>
                 </div>
-
-                <StepAction></StepAction>
               </li>
-              <li className="step step2">
-                <div className="step-title">Been on this planet for</div>
+              <li className={`step step2 ${active === 1 ? "active" : ""} ${active > 1 ? "done" : ""}`}>
+                <div onClick={() => setActive(1)} className="step-title">Been on this planet for</div>
                 <div className="step-content">
                   <div className="row d-flex justify-content-center">
                     <div className="form-field col-sm-4">
@@ -42,11 +42,11 @@ const test = () => {
                       </div>
                     </div>
                   </div>
+                  <StepAction clicked={() => setActive(2)}></StepAction>
                 </div>
-                <StepAction></StepAction>
               </li>
-              <li className="step step3">
-                <div className="step-title">The shape of my face closely matches</div>
+              <li className={`step step3 ${active === 2 ? "active" : ""} ${active > 2 ? "done" : ""}`}>
+                <div onClick={() => setActive(2)} className="step-title">The shape of my face closely matches</div>
                 <div className="step-content">
                   <div class="gender-radio-item-row shapeRadio" id="genderShapefemale">
                     <div class="gender-radio">
@@ -62,11 +62,11 @@ const test = () => {
                       <label for="gender-female-radio-regular" class="gender-radio-label woman-regular"></label>
                     </div>
                   </div>
+                  <StepAction clicked={() => setActive(3)}></StepAction>
                 </div>
-                <StepAction></StepAction>
               </li>
-              <li className="step step4">
-                <div className="step-title">My teeth look similar to</div>
+              <li className={`step step4 ${active === 3 ? "active" : ""} ${active > 3 ? "done" : ""}`}>
+                <div onClick={() => setActive(3)} className="step-title">My teeth look similar to</div>
                 <div className="step-content">
                   <p class="margin-bottom-0">
                     <i>Take a look inside! Bite down and stretch your lips with your fingers.</i>
@@ -133,31 +133,40 @@ const test = () => {
                       </div>
                     </div>
                   </div>
+                  <StepAction clicked={() => setActive(3)}></StepAction>
                 </div>
               </li>
               <li className="step step5">
                 <div className="step-title">My oral health</div>
                 <div class="step-content">
-                            <p><i>Take a look at your gums</i></p>
-                            <div class="radio-flex-row">
-                                <div class="radio">
-                                    <input id="radio-1" name="oral" type="radio" value="yes" checked=""/>
-                                    <label for="radio-1" class="radio-label">Yes</label>
-                                </div>
-                            
-                                <div class="radio">
-                                    <input id="radio-2" name="oral" type="radio" value="no"/>
-                                    <label for="radio-2" class="radio-label">No</label>
-                                </div>
-                            </div>
-                            <div class="step-actions">
-                                <button type="submit" onclick="AddContact5();" class="waves-effect waves-dark btn next-step" id="showmenu">SUBMIT</button>
-                                <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
-                            </div>
+                  <p>
+                    <i>Take a look at your gums</i>
+                  </p>
+                  <div class="radio-flex-row">
+                    <div class="radio">
+                      <input id="radio-1" name="oral" type="radio" value="yes" checked="" />
+                      <label for="radio-1" class="radio-label">
+                        Yes
+                      </label>
                     </div>
+
+                    <div class="radio">
+                      <input id="radio-2" name="oral" type="radio" value="no" />
+                      <label for="radio-2" class="radio-label">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="step-actions">
+                    <button type="submit" onclick="AddContact5();" class="waves-effect waves-dark btn next-step" id="showmenu">
+                      SUBMIT
+                    </button>
+                    <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                  </div>
+                </div>
               </li>
             </ul>
-          </form>
+          </div>
         </div>
       </section>
     </div>

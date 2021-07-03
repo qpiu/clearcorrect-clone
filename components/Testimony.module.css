@@ -2,6 +2,7 @@
   display: block;
   position: relative;
   width: 97%;
+  margin: 32px 20px 48px 20px;
 }
 
 .testimonyDesc {
@@ -12,23 +13,30 @@
   z-index: 0;
   border-radius: 4px;
   box-shadow: 0 5px 12px -9px rgb(0 0 0 / 17%);
-  margin-bottom: 1.5rem
+  margin-bottom: 1.5rem;
+  min-height: 300px;
 }
 
-.testimonyDesc::after{
+.testimonyDesc::after {
   position: absolute;
-    bottom: -10px;
-    left: 30px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 10px 0;
-    border-color: #fff transparent transparent transparent;
+  bottom: -10px;
+  left: 30px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  border-color: #fff transparent transparent transparent;
 }
 
+.testimonyDesc h5 {
+  font-size: 18px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 400;
+}
 
-.userImg, 
+.userImg,
 .userImg img {
   width: 80px;
   height: 80px;
@@ -37,18 +45,24 @@
 
 .icon {
   position: absolute;
-    top: -25px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #f8f8f8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  top: -25px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon i {
   font-size: 30px;
-  color: #57C2B1;
+  color: #57c2b1;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonyWrap {
+    min-width: 90%;
+  }
 }

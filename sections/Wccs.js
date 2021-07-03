@@ -1,6 +1,7 @@
 import React from "react";
 import Wcc from "../components/Wcc";
-import styles from '../sections/Wccs.module.css'
+import styles from "../sections/Wccs.module.css";
+import Fade from "react-reveal/Fade";
 
 const list = [
   { src: "wcc_1.png", head: "Founded by doctors", txt: "ClearCorrect has been listening to dental professionals and collaborating with them to create patient friendly solutions that they love and trust since 2006." },
@@ -12,11 +13,14 @@ export default function Wccs() {
   return (
     <div>
       <h2 className="center">Why choose Clear Correct</h2>
-      <div className={styles.wccWrap}>
-        {list.map((el, i) => {
-          return <Wcc el={el} key={i}></Wcc>;
-        })}
-      </div>
+
+      <Fade bottom>
+        <div className={styles.wccWrap}>
+          {list.map((el, i) => {
+            return <Wcc el={el} key={i}></Wcc>;
+          })}
+        </div>
+      </Fade>
     </div>
   );
 }

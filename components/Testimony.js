@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Testimony.module.css";
 const Testimony = (props) => {
   return (
-    <div className={styles.testmonyWrap}>
+    <div className={styles.testimonyWrap}>
       <div className={styles.testimonyDesc}>
         <div className={styles.icon}>
           <span>

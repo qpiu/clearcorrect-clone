@@ -7,7 +7,7 @@ export default function Step(props) {
         <div>
           <h3>{props.el.title}</h3>
           <p>{props.el.txt}</p>
-          <ul>
+          <ul className={styles.stepUl}>
             {props.el.list.map((el, i) => {
               return (
                 <li className={styles.stepList} key={i}>
