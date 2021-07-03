@@ -46,7 +46,7 @@ export default function Post ( { post } ) {
             </Link>
           </h3>
           <div className="mt-2 relative">
-            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered ) }</div>
+            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered.substring(0, 100) + '...')  }</div>
           </div>
         </div>
       </div>

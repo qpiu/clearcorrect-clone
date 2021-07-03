@@ -23,7 +23,7 @@ const whoweare = () => {
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main className="clear">
         <section className="ftco-section ftco-no-pt ftco-no-pb" id="section2">
           <div className="container-xl">
             <div className="row g-xl-5">
