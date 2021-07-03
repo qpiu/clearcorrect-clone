@@ -70,17 +70,17 @@ export default function Blog(props) {
         <div className="container">
           <div className="flex mobile-block">
             {posts && (
-              <div className="blogs">
-                {items.map((post, id) => {
-                  return (
-                    <Fade bottom>
+              <Fade bottom>
+                <div className="blogs">
+                  {items.map((post, id) => {
+                    return (
                       <div className="blog" key={id}>
                         <Post post={post} />
                       </div>
-                    </Fade>
-                  );
-                })}
-              </div>
+                    );
+                  })}
+                </div>
+              </Fade>
             )}
             <div className="blog-side">
               <BlogSide list={posts}></BlogSide>
