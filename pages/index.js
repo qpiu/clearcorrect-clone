@@ -4,6 +4,7 @@ import IndexBelt from "../sections/IndexBelt";
 import CountUp from "../components/Countup";
 
 const whoweare = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
       <IndexBelt></IndexBelt>
