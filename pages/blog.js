@@ -6,7 +6,7 @@ import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
 import Pagination from "../components/Pagination";
 import BlogSide from "../sections/BlogSide";
-
+import Fade from "react-reveal/Fade";
 const perPage = 2;
 
 export default function Blog(props) {
@@ -32,9 +32,6 @@ export default function Blog(props) {
       items.push(posts[i]); // 1 => 0, 1  // 2 => 2, 3
     }
   }
-  // useEffect(() => {
-  //   setPage(1);
-  // }, [posts]);
 
   const goTop = () => {
     setPage(1);
@@ -71,14 +68,16 @@ export default function Blog(props) {
       <HeroBelt></HeroBelt>
       <main className="ftca-section ">
         <div className="container">
-          <div className="flex">
+          <div className="flex mobile-block">
             {posts && (
               <div className="blogs">
                 {items.map((post, id) => {
                   return (
-                    <div className="blog" key={id}>
-                      <Post post={post} />
-                    </div>
+                    <Fade bottom>
+                      <div className="blog" key={id}>
+                        <Post post={post} />
+                      </div>
+                    </Fade>
                   );
                 })}
               </div>
@@ -95,4 +94,3 @@ export default function Blog(props) {
     </div>
   );
 }
-

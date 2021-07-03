@@ -18,42 +18,42 @@ const Carousel = (props) => {
     },
   });
 
-//   React.useEffect(() => {
-//     sliderRef.current.addEventListener("mouseover", () => {
-//       setPause(true);
-//     });
-//     sliderRef.current.addEventListener("mouseout", () => {
-//       setPause(false);
-//     });
-//   }, [sliderRef]);
+  //   React.useEffect(() => {
+  //     sliderRef.current.addEventListener("mouseover", () => {
+  //       setPause(true);
+  //     });
+  //     sliderRef.current.addEventListener("mouseout", () => {
+  //       setPause(false);
+  //     });
+  //   }, [sliderRef]);
 
-//   React.useEffect(() => {
-//     timer.current = setInterval(() => {
-//       if (!pause && slider) {
-//         if (currentSlide < slider.details().size - 1) {
-//           let newCurrentSlide = currentSlide;
-//           newCurrentSlide += 1;
-//           setCurrentSlide(newCurrentSlide);
-//           console.log(currentSlide)
-//         } else {
-//           setCurrentSlide(0);
-//         }
-//         slider.next();
-//       }
-//     }, 4000);
-//     return () => {
-//       clearInterval(timer.current);
-//     };
-//   }, [pause, slider]);
+  //   React.useEffect(() => {
+  //     timer.current = setInterval(() => {
+  //       if (!pause && slider) {
+  //         if (currentSlide < slider.details().size - 1) {
+  //           let newCurrentSlide = currentSlide;
+  //           newCurrentSlide += 1;
+  //           setCurrentSlide(newCurrentSlide);
+  //           console.log(currentSlide)
+  //         } else {
+  //           setCurrentSlide(0);
+  //         }
+  //         slider.next();
+  //       }
+  //     }, 4000);
+  //     return () => {
+  //       clearInterval(timer.current);
+  //     };
+  //   }, [pause, slider]);
 
   return (
     <>
       <div ref={sliderRef} className="keen-slider slider-wrap">
         <div className="keen-slider__slide number-slide1 img slider journey_1">
-          <div className="container">
+          <div className="flex container height-100 align-item-center">
             <div className="slider-txt">
               <h1>Dentist Services that You Can Trust</h1>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Carousel = (props) => {
           <div className="container">
             <div className="slider-txt">
               <h1>A Brighter Dental Experienced</h1>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
             </div>
           </div>
         </div>

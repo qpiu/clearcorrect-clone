@@ -31,11 +31,11 @@ export default function Post ( { post } ) {
         <div className={ styles.postTxt }>
           <div className="flex">
             <h4>
-              <i class="fas fa-calendar-alt"></i>
+              <i className="fas fa-calendar-alt"></i>
               { new Date( post.date ).toDateString() }
             </h4>
             <h4>
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
               { post.author === 1 ? "Marketing" : "KKK" }
             </h4>
           </div>

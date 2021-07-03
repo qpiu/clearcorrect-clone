@@ -50,7 +50,7 @@ export default function Home() {
 
         <Fade bottom>
           <section className="ftca-section">
-            <div className="container flex m360">
+            <div className="container flex">
               <div className="dca-head">
                 <h2>How do clear aligners work?</h2>
                 <p>Based on your doctor’s prescription, we start working on your customised treatment plan using advance technology in order to create your unique, custom clear aligners that apply targeted pressure to your teeth to slowly move them into alignment.</p>

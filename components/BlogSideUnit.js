@@ -16,28 +16,28 @@ const BlogSideUnit = ( props ) => {
         } );
       } );
     }
-    //console.log(postImgAndAuthor);
+    console.log(postImgAndAuthor);
     return () => {
       mounted = false;
     };
   }, [] );
 
   return (
-    <div class="block-21 mb-4 d-flex">
-      <a class="blog-img me-4" style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } }></a>
-      <div class="text">
-        <h3 class="heading">
+    <div className="block-21 mb-4 d-flex">
+      <a className="blog-img me-4" style={{ backgroundImage: `url(${postImgAndAuthor.featImgUrl})` }}></a>
+      <div className="text">
+        <h3 className="heading">
           <a href={ `/post/${ props.el.id }` }>{ props.el.title.rendered }</a>
         </h3>
-        <div class="meta">
+        <div className="meta">
           <div>
             <a href={ `/post/${ props.el.id }` }>
-              <span class="fa fa-calendar"></span> { props.el.date }
+              <span className="fa fa-calendar"></span> {props.el.date}
             </a>
           </div>
           <div>
             <a href={ props.el.href }>
-              <span class="fa fa-user"></span> { props.el.author }
+              <span className="fa fa-user"></span> {props.el.author}
             </a>
           </div>
         </div>
