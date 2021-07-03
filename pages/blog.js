@@ -5,6 +5,7 @@ import { getAllPostsFromServer } from "../lib/utils";
 import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
 import Pagination from "../components/Pagination";
+import BlogSide from "../sections/BlogSide";
 
 const perPage = 2;
 
@@ -15,9 +16,9 @@ export default function Blog(props) {
     if (mounted) {
       const postsFromServer = await getAllPostsFromServer();
       setPosts(postsFromServer);
-      console.log(posts)
+      console.log(posts);
     }
-    
+
     return () => (mounted = false);
   }, []);
 
@@ -31,9 +32,9 @@ export default function Blog(props) {
       items.push(posts[i]); // 1 => 0, 1  // 2 => 2, 3
     }
   }
-  useEffect(() => {
-    setPage(1);
-  }, [posts]);
+  // useEffect(() => {
+  //   setPage(1);
+  // }, [posts]);
 
   const goTop = () => {
     setPage(1);
@@ -82,7 +83,9 @@ export default function Blog(props) {
                 })}
               </div>
             )}
-            <div className="blog-side">i am blog side</div>
+            <div className="blog-side">
+              <BlogSide list={posts}></BlogSide>
+            </div>
           </div>
         </div>
         <div className="flex justufy-content-center">
@@ -92,3 +95,4 @@ export default function Blog(props) {
     </div>
   );
 }
+

@@ -796,6 +796,39 @@ ul.stepper .step-title {
   }
 }
 
+.block-21 .blog-img {
+  display: block;
+  height: 80px;
+  width: 80px;
+}
+.block-21 .text .meta > div {
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.block-21 .text .meta > div a {
+  color: #57c2b1;
+}
+
+.block-21 .text .heading {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.block-21 .text .heading a {
+  color: #000;
+}
+
+.sidebar-box *:last-child {
+  margin-bottom: 0;
+}
+
+.block-21 .text {
+  width: calc(100% - 90px);
+}
+
 @media (min-width: 767px) {
   .container {
     max-width: 720px;

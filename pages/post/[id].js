@@ -3,17 +3,18 @@ import axios from 'axios';
 import parse from 'html-react-parser';
 import { getAuthor, getFeaturedImage } from '../../lib/utils';
 import { POSTS_API_URL } from '../../lib/constants';
+import Hero from '../../sections/Hero';
 
 export default function Post ( { title, featuredImg, author, content, date } ) {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
+        <div className="">
             <Head>
                 <title>{ title }</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <Hero title={title}></Hero>
             <main
-                className="flex flex-col items-center flex-1 mx-5 md:px-20 py-10 max-w-5xl m-auto">
-                <h1 className="text-2xl md:text-6xl font-bold mt-5 mb-5 text-center">{ title }</h1>
+                className="">
                 <div>
                     <img src={ featuredImg } />
                 </div>
