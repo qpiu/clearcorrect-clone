@@ -32,9 +32,6 @@ export default function Blog(props) {
       items.push(posts[i]); // 1 => 0, 1  // 2 => 2, 3
     }
   }
-  // useEffect(() => {
-  //   setPage(1);
-  // }, [posts]);
 
   const goTop = () => {
     setPage(1);
