@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
-const Carousel = (props) => {
+function useInterval(callback, delay) {
+  const savedCallback = useRef();
+
+  // Remember the latest callback.
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  // Set up the interval.
+  useEffect(() => {
+    function tick() {
+      savedCallback.current();
+    }
+    if (delay !== null) {
+      let id = setInterval(tick, delay);
+      return () => clearInterval(id);
+    }
+  }, [delay]);
+}
+
+function Carousel(props) {
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
   const [pause, setPause] = React.useState(false);
-  const timer = React.useRef();
   const [sliderRef, slider] = useKeenSlider({
     loop: true,
     duration: 1000,
@@ -18,33 +37,35 @@ const Carousel = (props) => {
     },
   });
 
-  //   React.useEffect(() => {
-  //     sliderRef.current.addEventListener("mouseover", () => {
-  //       setPause(true);
-  //     });
-  //     sliderRef.current.addEventListener("mouseout", () => {
-  //       setPause(false);
-  //     });
-  //   }, [sliderRef]);
+  React.useEffect(() => {
+    sliderRef.current.addEventListener("mouseover", () => {
+      setPause(true);
+    });
+    sliderRef.current.addEventListener("mouseout", () => {
+      setPause(false);
+    });
+  }, [sliderRef]);
 
-  //   React.useEffect(() => {
-  //     timer.current = setInterval(() => {
-  //       if (!pause && slider) {
-  //         if (currentSlide < slider.details().size - 1) {
-  //           let newCurrentSlide = currentSlide;
-  //           newCurrentSlide += 1;
-  //           setCurrentSlide(newCurrentSlide);
-  //           console.log(currentSlide)
-  //         } else {
-  //           setCurrentSlide(0);
-  //         }
-  //         slider.next();
-  //       }
-  //     }, 4000);
-  //     return () => {
-  //       clearInterval(timer.current);
-  //     };
-  //   }, [pause, slider]);
+  useInterval(() => {
+    setCurrentSlide((currentSlide) => (currentSlide + 1) % 2);
+    slider.next();
+  }, 4000);
+
+//   React.useEffect(() => {
+//     useInterval(() => {
+      //   if (!pause && slider) {
+      //     let newCurrentSlide = (currentSlide + 1) % 2;
+      //     setCurrentSlide(newCurrentSlide);
+      //     console.log(currentSlide);
+      //     slider.next();
+      //   }
+//       setCurrentSlide((currentSlide) => currentSlide + 1);
+//       console.log(currentSlide);
+//     }, 4000);
+//     return () => {
+//       clearInterval(myTimer);
+//     };
+//   }, []);
 
   return (
     <>
@@ -84,24 +105,6 @@ const Carousel = (props) => {
         )}
       </div>
     </>
-  );
-};
-
-function ArrowLeft(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
-  return (
-    <svg onClick={props.onClick} className={"arrow arrow--left" + disabeld} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
-    </svg>
-  );
-}
-
-function ArrowRight(props) {
-  const disabeld = props.disabled ? " arrow--disabled" : "";
-  return (
-    <svg onClick={props.onClick} className={"arrow arrow--right" + disabeld} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
-    </svg>
   );
 }
 
