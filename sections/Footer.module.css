@@ -57,6 +57,11 @@
   width: 16.66667%;
 }
 
+.links ul,
+.contact ul {
+  padding: 0;
+}
+
 .footer span {
   margin-right: 0.5rem;
 }

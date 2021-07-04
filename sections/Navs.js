@@ -19,7 +19,7 @@ export default function Navs(props) {
       </button>
       <div className={toggle ? `${styles.navList} ${styles.open}` : styles.navList}>
         {title.map((el, i) => {
-          return <Nav active={props.currentRoute === el.href} el={el} key={i}></Nav>;
+          return <Nav active={el.href === props.currentRoute} el={el} key={i}></Nav>;
         })}
       </div>
     </ul>

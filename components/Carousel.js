@@ -51,22 +51,6 @@ function Carousel(props) {
     slider.next();
   }, 4000);
 
-//   React.useEffect(() => {
-//     useInterval(() => {
-      //   if (!pause && slider) {
-      //     let newCurrentSlide = (currentSlide + 1) % 2;
-      //     setCurrentSlide(newCurrentSlide);
-      //     console.log(currentSlide);
-      //     slider.next();
-      //   }
-//       setCurrentSlide((currentSlide) => currentSlide + 1);
-//       console.log(currentSlide);
-//     }, 4000);
-//     return () => {
-//       clearInterval(myTimer);
-//     };
-//   }, []);
-
   return (
     <>
       <div ref={sliderRef} className="keen-slider slider-wrap">
@@ -79,7 +63,7 @@ function Carousel(props) {
           </div>
         </div>
         <div className="keen-slider__slide number-slide2 img slider journey_2">
-          <div className="container">
+          <div className="flex container height-100 align-item-center">
             <div className="slider-txt">
               <h1>A Brighter Dental Experienced</h1>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
