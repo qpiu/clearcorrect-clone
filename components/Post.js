@@ -26,7 +26,7 @@ export default function Post ( { post } ) {
   return (
     <div className={ styles.post }>
       <div className={ styles.border }>
-        <a className={ styles.blogEntry } style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } } href={ `/post/${ post.id }` }></a>
+        <a className={ styles.blogEntry } style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } } href={ `/post/${ post.id }.html` }></a>
 
         <div className={ styles.postTxt }>
           <div className="flex">
@@ -46,7 +46,7 @@ export default function Post ( { post } ) {
             </Link>
           </h3>
           <div className="mt-2 relative">
-            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered.substring(0, 100) + '...')  }</div>
+            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered.substring( 0, 100 ) + '...' ) }</div>
           </div>
         </div>
       </div>
