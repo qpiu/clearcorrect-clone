@@ -1,10 +1,14 @@
 import React from "react";
+import Link from "next/link";
 import styles from "./Nav.module.css";
 
 const Nav = ( props ) => {
   return (
     <li className={ props.active ? `${ styles.li } ${ styles.active }` : `${ styles.li }` }>
-      <a href={ props.el.href === "/" ? `${ props.el.href }` : `${ props.el.href }.html` }>{ props.el.title }</a>
+      <Link href={ props.el.href === "/" ? `${ props.el.href }` : `${ props.el.href }.html` }>
+        <a >{ props.el.title }</a>
+      </Link>
+
     </li>
   );
 };
