@@ -28,7 +28,7 @@ const BlogSideUnit = ( props ) => {
       <a className="blog-img me-4" style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } }></a>
       <div className="text">
         <h3 className="heading">
-          <Link href={ `/post/${ props.el.id }.html` }>
+          <Link href={ `/post/${ props.el.id }` }>
             <a>{ props.el.title.rendered }</a>
           </Link>
         </h3>
