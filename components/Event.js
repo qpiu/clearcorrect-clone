@@ -26,24 +26,30 @@ const Event = ({ post }) => {
       <article class="indexnewsstyle-item">
         <div class="indexnewsstyle-item__date">
           <div>{new Date(post.date).getDate()}</div>
-          <div>{new Date(post.date).getMonth() + 1} / {new Date(post.date).getFullYear()}</div>
-          <div></div>
+          <div>
+            {new Date(post.date).getMonthName()}, {new Date(post.date).getFullYear()}
+          </div>
         </div>
 
         <div class="indexnewsstyle-item__right">
-          <a href="https://www.thda.org.tw/news/detail/1389" class="indexnewsstyle-item__title">
+          <a href={`/post/${post.id}`} class="indexnewsstyle-item__title">
             {post.title.rendered}
           </a>
 
           <div class="indexnewsstyle-item__text"> {post.author === 1 ? "Marketing" : "KKK"}</div>
 
-          <a href="https://www.thda.org.tw/news/detail/1389" class="indexnewsstyle-item__btn">
+          <a href={`/post/${post.id}`} class="indexnewsstyle-item__btn">
             閱讀更多
           </a>
         </div>
       </article>
     </div>
   );
+};
+
+Date.prototype.getMonthName = function () {
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return monthNames[this.getMonth()];
 };
 
 export default Event;

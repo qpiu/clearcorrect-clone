@@ -6,6 +6,7 @@ import Top from "../sections/Top";
 import SideButton from "../sections/SideButton";
 import Footer from "../sections/Footer";
 import { useRouter } from 'next/router'
+import "../styles/breadcrumb.css";
 
 function MyApp({ Component, pageProps }) {
   const [scrollPosition, setScrollPosition] = useState(0);
