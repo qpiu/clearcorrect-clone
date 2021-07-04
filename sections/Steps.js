@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "./Steps.module.css";
 import Step from "../components/Step";
+import Fade from "react-reveal/Fade";
+
 const list = [
   { title: "Book you Journey Tickets!", txt: "Find a ClearCorrect Provider near you and book an appointment today.", list: [], src: "journey_1" },
   { title: "Journey Day", txt: "On appointment day, your provider will discuss your case in detail with you and take all records needed to submit your case:", list: ["Profile photos", "Intra-oral photos", "Intra-oral scans"], src: "journey_2" },
@@ -17,31 +19,35 @@ const Steps = () => {
         {list.map((el, i) => {
           return <Step dir={i % 2 === 0 ? "normal" : "reverse"} key={i} el={el}></Step>;
         })}
-        <div className={styles.stepsEnd}>
-          <div className={styles.stepsEndTxt}>
-            <p>Your aligners will then be delivered to your provider who will set up an appointment with you and together, we will take off into the journey to your perfect smile!</p>
+        <Fade bottom>
+          <div className={styles.stepsEnd}>
+            <div className={styles.stepsEndTxt}>
+              <p>Your aligners will then be delivered to your provider who will set up an appointment with you and together, we will take off into the journey to your perfect smile!</p>
+            </div>
+            <div className={styles.stepsEndImg}></div>
           </div>
-          <div className={styles.stepsEndImg}></div>
-        </div>
+        </Fade>
       </div>
 
       <div className="ftca-section wcc-section">
         <div className="container">
           <h2>Some tips for a fun Journey</h2>
-          <ul className={styles.stepBeltList}>
-            {belt.map((el, i) => {
-              return (
-                <li key={i}>
-                  <div className={styles.imgBlock}>
-                    <img src={`./assets/step_belt_${i}.png`} />
-                  </div>
-                  <div  className={styles.txtBlock}>
+          <Fade bottom>
+            <ul className={styles.stepBeltList}>
+              {belt.map((el, i) => {
+                return (
+                  <li key={i}>
+                    <div className={styles.imgBlock}>
+                      <img src={`./assets/step_belt_${i}.png`} />
+                    </div>
+                    <div className={styles.txtBlock}>
                       <p>{el}</p>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </Fade>
         </div>
       </div>
     </div>

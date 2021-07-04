@@ -1,0 +1,20 @@
+._2jvtI {
+  list-style: none;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+._2jvtI li {
+  padding: 0 0.5rem;
+}
+
+._2jvtI li a {
+  color: #fff;
+}
+
+
+._2jvtI li:last-child a{
+    pointer-events: none;
+}

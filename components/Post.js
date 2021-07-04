@@ -27,16 +27,15 @@ export default function Post ( { post } ) {
     <div className={ styles.post }>
       <div className={ styles.border }>
         <a className={ styles.blogEntry } style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } } href={ `/post/${ post.id }` }></a>
-        {/* <img className="excerpt-img mb-5" src={postImgAndAuthor ? postImgAndAuthor.featImgUrl : "/aeeiee-logo.png"} /> */ }
 
         <div className={ styles.postTxt }>
           <div className="flex">
             <h4>
-              <i class="fas fa-calendar-alt"></i>
+              <i className="fas fa-calendar-alt"></i>
               { new Date( post.date ).toDateString() }
             </h4>
             <h4>
-              <i class="fas fa-user"></i>
+              <i className="fas fa-user"></i>
               { post.author === 1 ? "Marketing" : "KKK" }
             </h4>
           </div>
@@ -47,7 +46,7 @@ export default function Post ( { post } ) {
             </Link>
           </h3>
           <div className="mt-2 relative">
-            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered ) }</div>
+            <div className="mb-2 max-w-lg">{ parse( post.excerpt.rendered.substring(0, 100) + '...')  }</div>
           </div>
         </div>
       </div>

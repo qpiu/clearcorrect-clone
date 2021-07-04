@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "export": "npm run build && next export -o _static"
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.12.1",
@@ -16,6 +17,7 @@
     "html-react-parser": "^1.2.7",
     "keen-slider": "^5.5.1",
     "next": "^10.0.0",
+    "nextjs-breadcrumbs": "^1.1.4",
     "react": "^17.0.1",
     "react-bootstrap": "^1.6.1",
     "react-countup": "^4.4.0",

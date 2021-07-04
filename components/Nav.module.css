@@ -1,7 +1,12 @@
 .li {
-    padding: 22px 14px 22px 14px;
+  padding: 1.4rem 15px;
 }
 
 .li a {
-    color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.active > a {
+  color: #57c2b1;
+  font-weight: 700;
 }
