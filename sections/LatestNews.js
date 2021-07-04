@@ -10,13 +10,12 @@ const LatestNews = () => {
   const [posts, setPosts] = useState([]);
   useEffect(async () => {
     const postsFromServer = await getAllPostsFromServer();
-    console.log(postsFromServer);
     setPosts(postsFromServer);
   }, []);
   return (
-    <div>
-      <h3 className="mt-4 center">Latest news</h3>
-      <p className="center">lorem fsaf sdfsafsdf fsadfsdfsdaf fsadfsdfwqerw fasdfsdf</p>
+    <div className="ftco-section latest-news-section">
+      <h3 className="dark-font center">Latest news</h3>
+      <p className="dark-font center">各種公告事項、重要訊息、學術活動、聯誼活動。</p>
       <div>
         <div className="flex justify-content-center">
           <div className={currentCategory===3 ? 'news-select active': 'news-select'} onClick={() => setCurrentCategory(3)}>News</div>
@@ -26,9 +25,9 @@ const LatestNews = () => {
           <div className="container">
             {posts.map((el, i) => {
               if (el.categories[0] === currentCategory && currentCategory===3) {
-                return <News post={el}></News>;
+                return <News key={i} post={el}></News>;
               } else if (el.categories[0] === currentCategory && currentCategory===4) {
-                return <Event post={el}></Event>;
+                return <Event key={i} post={el}></Event>;
               }
             })}
           </div>

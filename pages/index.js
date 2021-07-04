@@ -15,14 +15,15 @@ const cards = [
 
 const whoweare = () => {
   return (
-    <div>
-      <IndexBelt></IndexBelt>
-      <Carousel></Carousel>
-      <LatestNews></LatestNews>
+    <>
       <Head>
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <IndexBelt></IndexBelt>
+      <Carousel></Carousel>
+      <LatestNews></LatestNews>
+
       <main className="clear">
         <section className="ftco-section ftco-no-pt ftco-no-pb" id="section2">
           <div className="container-xl">
@@ -113,7 +114,7 @@ const whoweare = () => {
           </div>
         </div>
       </main>
-    </div>
+    </>
   );
 };
 

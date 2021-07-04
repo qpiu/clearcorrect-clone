@@ -1,5 +1,14 @@
 import React from "react";
 import styles from "./Hero.module.css";
+import Breadcrumbs from "nextjs-breadcrumbs";
+
+var findOne = function (haystack, arr) {
+  return arr.some(function (v) {
+      return haystack.indexOf(v) >= 0;
+  });
+};
+
+
 const Hero = (props) => {
   return (
     <div className="section">
@@ -8,7 +17,7 @@ const Hero = (props) => {
         <div className="container">
           <div className={styles.txtFlex}>
             <div className={styles.txtWrap}>
-              <div>I am breadcrum</div>
+              <Breadcrumbs useDefaultStyle transformLabel={(title) => (title === "Home" || title === "post") ? (title + " >") : (props.title + ' >')}></Breadcrumbs>
               <h1>{props.title}</h1>
             </div>
           </div>

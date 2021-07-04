@@ -15,8 +15,8 @@ export default function Blog(props) {
     let mounted = true;
     if (mounted) {
       const postsFromServer = await getAllPostsFromServer();
-      setPosts(postsFromServer);
-      console.log(posts);
+      let result = postsFromServer.filter(el => el.categories[0] === 2);
+      setPosts(result);
     }
 
     return () => (mounted = false);
@@ -56,6 +56,8 @@ export default function Blog(props) {
   const setPageFromChild = (index) => {
     setPage(index);
   };
+
+  console.log(posts)
 
   return (
     <div>

@@ -52,18 +52,23 @@ export default function News({ post }) {
     // </div>
     <article className="indexnewstabs-item">
       <div className="indexnewstabs-item__info">
-        <div className="indexnewstabs-item__info-tag" ></div>
+        <div className="indexnewstabs-item__info-tag"></div>
 
         <div className="indexnewstabs-item__info-title">
-          <a href="https://www.thda.org.tw/lecture/detail/174">
+          <a href={`/post/${post.id}`}>
             <h3>{post.title.rendered}</h3>
           </a>
         </div>
 
-        <div className="indexnewstabs-item__info-date">{new Date(post.date).toDateString()}</div>
+        <div className="indexnewstabs-item__info-date">
+          <div>{new Date(post.date).getDate()}</div>
+          <div>
+            {new Date(post.date).getMonthName()}, {new Date(post.date).getFullYear()}
+          </div>
+        </div>
       </div>
 
-      <a href="" className="indexnewstabs-item__imgbox">
+      <a href={`/post/${post.id}`} className="indexnewstabs-item__imgbox">
         <div className="indexnewstabs-item__img" style={{ backgroundImage: `url(${postImgAndAuthor.featImgUrl})` }} href={`/post/${post.id}`}></div>
       </a>
     </article>
