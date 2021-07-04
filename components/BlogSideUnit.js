@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { getAuthor, getFeaturedImage } from "../lib/utils";
 
 const BlogSideUnit = ( props ) => {
@@ -27,7 +28,9 @@ const BlogSideUnit = ( props ) => {
       <a className="blog-img me-4" style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } }></a>
       <div className="text">
         <h3 className="heading">
-          <a href={ `/post/${ props.el.id }.html` }>{ props.el.title.rendered }</a>
+          <Link href={ `/post/${ props.el.id }.html` }>
+            <a>{ props.el.title.rendered }</a>
+          </Link>
         </h3>
         <div className="meta">
           <div>
