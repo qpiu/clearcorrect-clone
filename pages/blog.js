@@ -8,6 +8,7 @@ import Pagination from "../components/Pagination";
 import BlogSide from "../sections/BlogSide";
 import Fade from "react-reveal/Fade";
 const perPage = 2;
+const blogCategoryCode = 2
 
 export default function Blog(props) {
   const [posts, setPosts] = useState([]);
@@ -15,7 +16,7 @@ export default function Blog(props) {
     let mounted = true;
     if (mounted) {
       const postsFromServer = await getAllPostsFromServer();
-      let result = postsFromServer.filter(el => el.categories[0] === 2);
+      let result = postsFromServer.filter(el => el.categories[0] === blogCategoryCode);
       setPosts(result);
     }
 
@@ -56,8 +57,6 @@ export default function Blog(props) {
   const setPageFromChild = (index) => {
     setPage(index);
   };
-
-  console.log(posts)
 
   return (
     <div>
