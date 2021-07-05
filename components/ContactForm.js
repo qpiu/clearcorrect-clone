@@ -30,7 +30,6 @@ export default function ContactForm() {
       .post(FORM_POST_URL, formData, { headers: { "Content-Type": "multipart/form-data" } })
       .then(function (response) {
         //handle success
-        console.log(response);
         setForm({ yourname: "", youremail: "", subject: "", message: "" });
       })
       .catch(function (response) {

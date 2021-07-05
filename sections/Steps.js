@@ -38,7 +38,7 @@ const Steps = () => {
                 return (
                   <li key={i}>
                     <div className={styles.imgBlock}>
-                      <img src={`./assets/step_belt_${i}.png`} />
+                      <img src={`../assets/step_belt_${i}.png`} />
                     </div>
                     <div className={styles.txtBlock}>
                       <p>{el}</p>

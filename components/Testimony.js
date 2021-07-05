@@ -14,7 +14,7 @@ const Testimony = (props) => {
       </div>
       <div>
         <div className={styles.userImg}>
-          <img src={`./assets/${props.el.src}`} />
+          <img src={`../assets/${props.el.src}`} />
         </div>
       </div>
     </div>

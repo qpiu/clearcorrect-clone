@@ -57,7 +57,6 @@ export default function Blog(props) {
   const setPageFromChild = (index) => {
     setPage(index);
   };
-  console.log(items)
 
   return (
     <div>

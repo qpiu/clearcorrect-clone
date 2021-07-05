@@ -17,7 +17,6 @@ const BlogSideUnit = ( props ) => {
         } );
       } );
     }
-    console.log( postImgAndAuthor );
     return () => {
       mounted = false;
     };
