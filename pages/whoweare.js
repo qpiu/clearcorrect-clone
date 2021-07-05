@@ -56,7 +56,7 @@ export default function Home() {
                 <p>Based on your doctor’s prescription, we start working on your customised treatment plan using advance technology in order to create your unique, custom clear aligners that apply targeted pressure to your teeth to slowly move them into alignment.</p>
               </div>
               <div className="dca-img-block">
-                <img src="./assets/teeth_flow.png" />
+                <img src="../assets/teeth_flow.png" />
               </div>
             </div>
           </section>

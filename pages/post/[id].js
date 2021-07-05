@@ -25,7 +25,7 @@ export default function Post({ title, featuredImg, author, content, date, catego
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title={title}></Hero>
+      <Hero title={title} page="journey"></Hero>
       <main className="ftca-section">
         <section className="flex container mobile-block">
           <div className="blogs mr-5">
