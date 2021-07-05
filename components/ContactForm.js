@@ -1,17 +1,25 @@
 import { FORM_POST_URL } from "../lib/constants";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import axios from "axios";
-import { Row, Col, Grid } from "react-bootstrap";
+import { Form, Row, Col, Grid } from "react-bootstrap";
 import styles from "./ContactForm.module.css";
 import Identify from "../components/Identify";
 
 export default function ContactForm() {
   const [form, setForm] = useState([]);
-
+  const [validated, setValidated] = useState(false);
   const [user, setUser] = useState(0);
   const [activate, setActivate] = useState(0);
+  const formRef = useRef(null);
 
-  const handleSubmit = (event) => {
+  const clicked = (event) => {
+    event.preventDefault();
+    if (formRef.current.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    setValidated(true);
     event.preventDefault();
     const data = {
       yourname: form.yourname,
@@ -24,54 +32,62 @@ export default function ContactForm() {
     for (let key in data) {
       formData.append(key, data[key]);
     }
-
     //const formElement = event.target;
-    axios
-      .post(FORM_POST_URL, formData, { headers: { "Content-Type": "multipart/form-data" } })
-      .then(function (response) {
-        //handle success
-        setForm({ yourname: "", youremail: "", subject: "", message: "" });
-      })
-      .catch(function (response) {
-        //handle error
-        console.log(response);
-      });
+    if (formRef.current.checkValidity()) {
+      axios
+        .post(FORM_POST_URL, formData, { headers: { "Content-Type": "multipart/form-data" } })
+        .then(function (response) {
+          //handle success
+          console.log(response);
+          setForm({ yourname: "", youremail: "", subject: "", message: "" });
+        })
+        .catch(function (response) {
+          //handle error
+          console.log(response);
+        });
+      setSubmit(0);
+      setValidated(false);
+    }
   };
 
   return (
     <>
       <Identify clicked={() => setActivate(1)}></Identify>
-      <form className={activate ? `${styles.formWrap} ${styles.show}` : `${styles.formWrap} ${styles.hidden}`} onSubmit={handleSubmit}>
+      <Form ref={formRef} noValidate validated={validated} className={activate ? `${styles.formWrap} ${styles.show}` : `${styles.formWrap} ${styles.hidden}`}>
         <Row>
           <Col>
-            <label htmlFor="name">Name</label>
-            <input className="form-control" id="name" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
+            <Form.Label>Name</Form.Label>
+            <Form.Control required className="form-control" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
+            <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
           </Col>
 
           <Col>
-            <label htmlFor="email">Email</label>
-            <input className="form-control" id="email" type="text" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
+            <Form.Label>Email</Form.Label>
+            <Form.Control required className="form-control" type="email" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
+            <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
           </Col>
 
           <Col>
-            <label htmlFor="subject">Subject</label>
-            <input className="form-control" id="subject" type="text" name="form[subject]" value={form.subject || ""} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
+            <Form.Label>Subject</Form.Label>
+            <Form.Control required className="form-control" type="text" name="form[subject]" value={form.subject || ""} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
+            <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
           </Col>
         </Row>
 
         <Row>
           <Col>
-            <label htmlFor="message">Messsage</label>
-            <textarea className="form-control" id="message" name="form[message]" value={form.message || ""} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <Form.Label>Messsage</Form.Label>
+            <Form.Control as="textarea" required className="form-control" name="form[message]" value={form.message || ""} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
           </Col>
         </Row>
 
         <div className={styles.btnBlock}>
-          <button className="btn" type="submit">
+          <button className="btn" type="submit" onClick={clicked}>
             Send Message
           </button>
         </div>
-      </form>
+      </Form>
     </>
   );
 }
