@@ -17,7 +17,7 @@ export default function Navs ( props ) {
       <button onClick={ () => setToggle( ( toggle ) => !toggle ) } className={ styles.toggleButton }>
         <i className="fas fa-list"></i>Menu
       </button>
-      <div className={ toggle ? `${ styles.navList } ${ styles.open }` : styles.navList }>
+      <div onClick={ () => setToggle( ( toggle ) => !toggle ) } className={ toggle ? `${ styles.navList } ${ styles.open }` : styles.navList }>
         { title.map( ( el, i ) => {
           return <Nav active={ props.currentRoute === el.href } el={ el } key={ i }></Nav>;
         } ) }
