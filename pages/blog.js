@@ -8,7 +8,7 @@ import Pagination from "../components/Pagination";
 import BlogSide from "../sections/BlogSide";
 import Fade from "react-reveal/Fade";
 const perPage = 2;
-const blogCategoryCode = 2
+const blogCategoryCode = 2;
 
 export default function Blog(props) {
   const [posts, setPosts] = useState([]);
@@ -16,7 +16,7 @@ export default function Blog(props) {
     let mounted = true;
     if (mounted) {
       const postsFromServer = await getAllPostsFromServer();
-      let result = postsFromServer.filter(el => el.categories[0] === blogCategoryCode);
+      let result = postsFromServer.filter((el) => el.categories[0] === blogCategoryCode);
       setPosts(result);
     }
 
@@ -80,6 +80,9 @@ export default function Blog(props) {
                       </div>
                     );
                   })}
+                  <div className="flex justufy-content-center">
+                    <Pagination currentPage={page} setPageFromChild={setPageFromChild} goNext={goNext} goLast={goLast} goPrev={goPrev} goTop={goTop} pageNum={Math.ceil(pageNum)} />
+                  </div>
                 </div>
               </Fade>
             )}
@@ -87,9 +90,6 @@ export default function Blog(props) {
               <BlogSide list={posts}></BlogSide>
             </div>
           </div>
-        </div>
-        <div className="flex justufy-content-center">
-          <Pagination currentPage={page} setPageFromChild={setPageFromChild} goNext={goNext} goLast={goLast} goPrev={goPrev} goTop={goTop} pageNum={Math.ceil(pageNum)} />
         </div>
       </main>
     </div>
