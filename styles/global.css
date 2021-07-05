@@ -491,6 +491,7 @@ img {
   display: flex;
   width: 75%;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .blog {
