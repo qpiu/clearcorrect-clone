@@ -10,7 +10,7 @@ export default function ContactForm() {
   const [validated, setValidated] = useState(false);
   const [user, setUser] = useState(0);
   const [activate, setActivate] = useState(0);
-  const formRef = useRef(null)
+  const formRef = useRef(null);
 
   const clicked = (event) => {
     event.preventDefault();
@@ -55,31 +55,31 @@ export default function ContactForm() {
       <Identify clicked={() => setActivate(1)}></Identify>
       <Form ref={formRef} noValidate validated={validated} className={activate ? `${styles.formWrap} ${styles.show}` : `${styles.formWrap} ${styles.hidden}`}>
         <Row>
-          <Form.Group controlId="name">
+          <Col>
             <Form.Label>Name</Form.Label>
             <Form.Control required className="form-control" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
             <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
-          </Form.Group>
+          </Col>
 
-          <Form.Group controlId="email">
+          <Col>
             <Form.Label>Email</Form.Label>
             <Form.Control required className="form-control" type="email" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
             <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
-          </Form.Group>
+          </Col>
 
-          <Form.Group controlId="subject">
+          <Col>
             <Form.Label>Subject</Form.Label>
             <Form.Control required className="form-control" type="text" name="form[subject]" value={form.subject || ""} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
             <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
-          </Form.Group>
+          </Col>
         </Row>
 
         <Row>
-          <Form.Group controlId="message">
+          <Col>
             <Form.Label>Messsage</Form.Label>
             <Form.Control as="textarea" required className="form-control" name="form[message]" value={form.message || ""} onChange={(e) => setForm({ ...form, message: e.target.value })} />
             <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
-          </Form.Group>
+          </Col>
         </Row>
 
         <div className={styles.btnBlock}>
