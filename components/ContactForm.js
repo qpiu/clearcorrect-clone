@@ -45,24 +45,24 @@ export default function ContactForm() {
         <Row>
           <Col>
             <label htmlFor="name">Name</label>
-            <input className="form-control" id="name" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
+            <input required className="form-control" id="name" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
           </Col>
 
           <Col>
             <label htmlFor="email">Email</label>
-            <input className="form-control" id="email" type="text" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
+            <input required className="form-control" id="email" type="text" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
           </Col>
 
           <Col>
             <label htmlFor="subject">Subject</label>
-            <input className="form-control" id="subject" type="text" name="form[subject]" value={form.subject || ""} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
+            <input required className="form-control" id="subject" type="text" name="form[subject]" value={form.subject || ""} onChange={(e) => setForm({ ...form, subject: e.target.value })} />
           </Col>
         </Row>
 
         <Row>
           <Col>
             <label htmlFor="message">Messsage</label>
-            <textarea className="form-control" id="message" name="form[message]" value={form.message || ""} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <textarea required className="form-control" id="message" name="form[message]" value={form.message || ""} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </Col>
         </Row>
 
