@@ -5,16 +5,41 @@
 }
 
 .formWrap {
-  transition: all 0.5s linear;
+  transition: all 1s linear;
+}
+
+.formContainer {
+  min-height: 50vh;
 }
 
 .show {
   display: block;
   max-height: 100%;
   margin: 2rem 0;
+  opacity: 1;
+  /* z-index: 1;
+  position: relative; */
 }
 
-.hidden {
+.hidden,
+.hidden > * {
   opacity: 0;
   max-height: 0;
+  width: 0;
+  z-index: -1;
+  position: absolute;
+  /* display: none; */
+}
+
+.block {
+  opacity: 1;
+}
+
+.none {
+  opacity: 0;
+}
+
+.success {
+  color: #f95474;
+  margin-top: .5rem;
 }

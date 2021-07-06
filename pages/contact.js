@@ -12,32 +12,6 @@ export default function Contact() {
         <h3>Contact us</h3>
         <p>We're open for any suggestion or just to have a chat</p>
 
-        <div className="row flex mobile-block">
-          <div className="col">
-            <div className="contact-box">
-              <p>
-                <span>ADDRESS:</span>
-                203 Fake St. Mountain View, San Francisco, California, USA
-              </p>
-            </div>
-          </div>
-          <div className="col">
-            <div className="contact-box">
-              <p>
-                <span>EMAIL:</span>
-                <a href="mailto:contact@clearcorrect.com">contact@clearcorrect.com</a>
-              </p>
-            </div>
-          </div>
-          <div className="col">
-            <div className="contact-box">
-              <p>
-                <span>PHONE:</span>
-                <a href="tel:+2 392 3929 210"> +2 392 3929 210</a>
-              </p>
-            </div>
-          </div>
-        </div>
         <ContactForm />
 
         <div className="social-media mt-5">

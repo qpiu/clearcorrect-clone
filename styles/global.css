@@ -644,6 +644,14 @@ ul.stepper .step-title {
   margin-right: 15px;
 }
 
+.gender-radio span {
+  position: absolute;
+  top: -30px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .gender-radio input {
   position: absolute;
   opacity: 0;
