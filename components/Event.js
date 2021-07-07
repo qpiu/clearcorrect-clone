@@ -9,7 +9,6 @@ const Event = ({ post }) => {
     if (mounted) {
       const author = getAuthor(post.author);
       const featuredImg = getFeaturedImage(post.featured_media);
-      //   resolve the promises in getAuthor and getFeaturedImg async functions using Promise.all
       Promise.all([author, featuredImg]).then((res) => {
         setPostImgAndAuthor({
           author: res[0],

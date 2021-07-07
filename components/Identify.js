@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Identify.module.css";
-import StepAction from "../components/StepAction";
 
 const Identify = (props) => {
-  const [index, setIndex] = useState(0);
   return (
     <div className={styles.questionWrap}>
       <h3>I am ...</h3>

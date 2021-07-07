@@ -11,7 +11,6 @@ export default function Post ( { post } ) {
     if ( mounted ) {
       const author = getAuthor( post.author );
       const featuredImg = getFeaturedImage( post.featured_media );
-      //   resolve the promises in getAuthor and getFeaturedImg async functions using Promise.all
       Promise.all( [ author, featuredImg ] ).then( ( res ) => {
         setPostImgAndAuthor( {
           author: res[ 0 ],
@@ -27,8 +26,6 @@ export default function Post ( { post } ) {
     <div className={ styles.post }>
       <div className={ styles.border }>
         <a className={ styles.blogEntry } style={ { backgroundImage: `url(${ postImgAndAuthor.featImgUrl })` } } href={ `/post/${ post.id }` }></a>
-        {/* <img className="excerpt-img mb-5" src={postImgAndAuthor ? postImgAndAuthor.featImgUrl : "/aeeiee-logo.png"} /> */ }
-
         <div className={ styles.postTxt }>
           <div className="flex">
             <h4>
@@ -40,7 +37,6 @@ export default function Post ( { post } ) {
               { post.author === 1 ? "Marketing" : "KKK" }
             </h4>
           </div>
-
           <h3>
             <Link href={ `/post/${ post.id }` }>
               <a className="text-4xl font-bold">{ post.title.rendered }</a>

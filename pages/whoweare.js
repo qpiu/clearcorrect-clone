@@ -4,7 +4,6 @@ import Testimonies from "../sections/Testimonies";
 import Wccs from "../sections/Wccs";
 import Hero from "../sections/Hero";
 import HeroBelt from "../sections/HeroBelt";
-
 import Fade from "react-reveal/Fade";
 
 export default function Home() {
@@ -16,9 +15,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero title="Who We Are" page="whoweare"></Hero>
-
         <HeroBelt></HeroBelt>
-
         <Fade bottom>
           <div className="container">
             <div className="flex mobile-block">
@@ -47,7 +44,6 @@ export default function Home() {
             </div>
           </section>
         </Fade>
-
         <Fade bottom>
           <section className="ftca-section">
             <div className="container flex">
@@ -67,7 +63,6 @@ export default function Home() {
             <Testimonies></Testimonies>
           </div>
         </Fade>
-
         <section className="ftca-section wcc">
           <div className="container flex">
             <Wccs></Wccs>

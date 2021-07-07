@@ -16,7 +16,6 @@ export default function Post({ title, featuredImg, author, content, date, catego
       let result = postsFromServer.filter((el) => el.categories[0] === categories);
       setPosts(result);
     }
-
     return () => (mounted = false);
   }, []);
   return (
@@ -32,12 +31,9 @@ export default function Post({ title, featuredImg, author, content, date, catego
             <p>
               <img src={featuredImg} />
             </p>
-            {/* <p className="text-sm mt-5">Written by {author}</p>
-            <p className="text-sm font-semibold mb-5">Published on {new Date(date).toDateString()}</p> */}
             <h2 className="dark-font">{title}</h2>
             <div>{parse(content)}</div>
           </div>
-
           <div className="blog-side">
             <BlogSide list={posts}></BlogSide>
           </div>

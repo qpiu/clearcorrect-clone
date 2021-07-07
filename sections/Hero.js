@@ -2,12 +2,6 @@ import React from "react";
 import styles from "./Hero.module.css";
 import Breadcrumbs from "nextjs-breadcrumbs";
 
-var findOne = function (haystack, arr) {
-  return arr.some(function (v) {
-      return haystack.indexOf(v) >= 0;
-  });
-};
-
 
 const Hero = (props) => {
   return (
