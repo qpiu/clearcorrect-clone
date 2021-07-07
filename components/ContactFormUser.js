@@ -9,15 +9,14 @@ import Link from "next/link";
 const ContactFormUser = (props) => {
   const [form, setForm] = useState([]);
   const [validated, setValidated] = useState(false);
-  const [user, setUser] = useState(0);
-  const [activate, setActivate] = useState(null);
+  const [success, setSuccess] = useState(0);
   const formRef = useRef(null);
-  console.log(form);
   const clicked = (event) => {
     event.preventDefault();
     if (formRef.current.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+      setSuccess(0);
     }
 
     setValidated(true);
@@ -104,6 +103,7 @@ const ContactFormUser = (props) => {
           <button className="btn" type="submit" onClick={clicked}>
             Send Message
           </button>
+          <div className={success ? `${styles.success}` : `${styles.success} ${styles.hidden}`}>您的留言已送出成功，將有專人聯絡您</div>
         </div>
       </Form.Group>
     </Form>
