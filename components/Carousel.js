@@ -2,6 +2,11 @@ import React, { useRef, useEffect } from "react";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
+const list = [
+  { title: "Dentist Services that You Can Trust", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", img: "journey_1" },
+  { title: "A Brighter Dental Experienced", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", img: "journey_2" },
+];
+
 function useInterval(callback, delay) {
   const savedCallback = useRef();
 
@@ -49,43 +54,23 @@ function Carousel(props) {
   useInterval(() => {
     setCurrentSlide((currentSlide) => (currentSlide + 1) % 2);
     slider.next();
-  }, 4000);
-
-//   React.useEffect(() => {
-//     useInterval(() => {
-      //   if (!pause && slider) {
-      //     let newCurrentSlide = (currentSlide + 1) % 2;
-      //     setCurrentSlide(newCurrentSlide);
-      //     console.log(currentSlide);
-      //     slider.next();
-      //   }
-//       setCurrentSlide((currentSlide) => currentSlide + 1);
-//       console.log(currentSlide);
-//     }, 4000);
-//     return () => {
-//       clearInterval(myTimer);
-//     };
-//   }, []);
+  }, 5000);
 
   return (
     <>
       <div ref={sliderRef} className="keen-slider slider-wrap">
-        <div className="keen-slider__slide number-slide1 img slider journey_1">
-          <div className="flex container height-100 align-item-center">
-            <div className="slider-txt">
-              <h1>Dentist Services that You Can Trust</h1>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        {list.map((el, i) => {
+          return (
+            <div key={i} className={`keen-slider__slide number-slide1 img slider ${el.img}`}>
+              <div className="flex container height-100 align-item-center">
+                <div className="slider-txt">
+                  <h1>{el.title}</h1>
+                  <p>{el.content}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="keen-slider__slide number-slide2 img slider journey_2">
-          <div className="container">
-            <div className="slider-txt">
-              <h1>A Brighter Dental Experienced</h1>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-            </div>
-          </div>
-        </div>
+          );
+        })}
 
         {slider && (
           <div className="dots">

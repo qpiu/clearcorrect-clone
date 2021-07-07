@@ -1,9 +1,8 @@
 import { FORM_POST_URL_DOCTOR } from "../lib/constants";
 import { useState, useRef } from "react";
 import axios from "axios";
-import { Form, Row, Grid, FormCheck } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import styles from "./ContactForm.module.css";
-import Identify from "../components/Identify";
 import Link from "next/link";
 
 const ContactFormDoc = (props) => {

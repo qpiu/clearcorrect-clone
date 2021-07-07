@@ -15,10 +15,8 @@ function MyApp({ Component, pageProps }) {
     const position = window.pageYOffset;
     setScrollPosition(position);
   };
-
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -35,9 +33,7 @@ function MyApp({ Component, pageProps }) {
         <Top></Top>
         <Navs currentRoute={router.asPath} />
         <Component {...pageProps} />
-
         <Footer></Footer>
-
         <SideButton pos={scrollPosition}></SideButton>
       </content>
     </>

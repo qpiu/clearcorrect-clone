@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
 import pageStyle from "./Pagination.module.css";
 
-let styles = { backgroundColor: "#57c2b1" };
 
 const PaginationUnit = (props) => {
   let countArray = new Array(props.pageNum).fill(0);
-
   return (
     <Pagination cssModule={pageStyle} aria-label="Page navigation example">
       <PaginationItem>
@@ -15,7 +13,6 @@ const PaginationUnit = (props) => {
       <PaginationItem>
         <PaginationLink onClick={() => props.goPrev()} previous />
       </PaginationItem>
-
       {countArray.map((el, index) => {
         return (
           <PaginationItem key={index} active={props.currentPage === index + 1}>
@@ -23,7 +20,6 @@ const PaginationUnit = (props) => {
           </PaginationItem>
         );
       })}
-
       <PaginationItem>
         <PaginationLink onClick={() => props.goNext()} next />
       </PaginationItem>
