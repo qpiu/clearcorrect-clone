@@ -16,6 +16,7 @@ const ContactFormDoc = (props) => {
     if (formRef.current.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
+      setSuccess(0)
     }
 
     setValidated(true);
