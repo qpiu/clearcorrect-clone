@@ -1,8 +1,7 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import { getAuthor, getFeaturedImage } from "../lib/utils";
 
-const Event = ({ post }) => {
+export default function News({ post }) {
   const [postImgAndAuthor, setPostImgAndAuthor] = useState({ featImgUrl: "", author: "" });
   useEffect(() => {
     let mounted = true;
@@ -21,34 +20,29 @@ const Event = ({ post }) => {
     };
   }, []);
   return (
-    <div>
-      <article className="indexnewsstyle-item">
-        <div className="indexnewsstyle-item__date">
+    <article className="indexnewstabs-item">
+      <div className="indexnewstabs-item__info">
+        <div className="indexnewstabs-item__info-tag"></div>
+        <div className="indexnewstabs-item__info-title">
+          <a href={`/post/${post.id}`}>
+            <h3>{post.title.rendered}</h3>
+          </a>
+        </div>
+        <div className="indexnewstabs-item__info-date">
           <div>{new Date(post.date).getDate()}</div>
           <div>
             {new Date(post.date).getMonthName()}, {new Date(post.date).getFullYear()}
           </div>
         </div>
-
-        <div className="indexnewsstyle-item__right">
-          <a href={`/post/${post.id}`} className="indexnewsstyle-item__title">
-            {post.title.rendered}
-          </a>
-
-          <div className="indexnewsstyle-item__text"> {post.author === 1 ? "Marketing" : "KKK"}</div>
-
-          <a href={`/post/${post.id}`} className="indexnewsstyle-item__btn">
-            閱讀更多
-          </a>
-        </div>
-      </article>
-    </div>
+      </div>
+      <a href={`/post/${post.id}`} className="indexnewstabs-item__imgbox">
+        <div className="indexnewstabs-item__img" style={{ backgroundImage: `url(${postImgAndAuthor.featImgUrl})` }} href={`/post/${post.id}`}></div>
+      </a>
+    </article>
   );
-};
+}
 
 Date.prototype.getMonthName = function () {
   var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   return monthNames[this.getMonth()];
 };
-
-export default Event;

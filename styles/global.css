@@ -46,12 +46,20 @@ img {
   margin-right: 3rem;
 }
 
+.mt-3-g {
+  margin-top: 3rem;
+}
+
 .hidden {
   display: none;
 }
 
 .flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .dark-font {
@@ -448,7 +456,7 @@ img {
 }
 
 .news-wrapper {
-  margin-bottom: 10rem;
+  margin: 3rem 0;
 }
 
 .slider-wrap .img:after {
@@ -848,15 +856,14 @@ ul.stepper .step-title {
 }
 
 .indexnewstabs-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: calc(100% - 704px);
+  margin: 1rem 0;
 }
 
-.indexnewstabs-item:nth-child(1) {
+.indexnewstabs-item.index:nth-child(1) {
   width: 704px;
   height: 424px;
   float: left;
@@ -864,19 +871,21 @@ ul.stepper .step-title {
   transition: opacity 0.3s ease;
 }
 
-.indexnewstabs-item:nth-child(2),
-.indexnewstabs-item:nth-child(3),
-.indexnewstabs-item:nth-child(4) {
+.indexnewstabs-item {
   padding-top: 0px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 20px;
+}
+
+.indexnewstabs-item.index:nth-child(1) {
+  border-bottom: none;
 }
 
 .indexnewstabs-item__info {
   width: calc(100% - 180px);
 }
 
-.indexnewstabs-item:nth-child(1)::before {
+.indexnewstabs-item.index:nth-child(1)::before {
   content: "";
   display: block;
   width: 0;
@@ -888,7 +897,7 @@ ul.stepper .step-title {
   bottom: 123px;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-title {
   width: calc(100% - 100px);
 }
 
@@ -898,7 +907,7 @@ ul.stepper .step-title {
   padding-top: 20px;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__info::after {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info::after {
   content: "";
   display: block;
   width: 622px;
@@ -924,7 +933,7 @@ ul.stepper .step-title {
   transition: opacity 0.3s ease;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__info {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info {
   position: absolute;
   bottom: 23px;
   color: #fff;
@@ -946,7 +955,7 @@ ul.stepper .step-title {
   flex-wrap: wrap;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__img {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -970,7 +979,7 @@ ul.stepper .step-title {
   transition-property: transform, -webkit-transform;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title h3 {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-title h3 {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   -webkit-transition-duration: 0s;
@@ -994,7 +1003,7 @@ ul.stepper .step-title {
   transition: opacity 0.3s ease;
 }
 
-.indexnewstabs-item:nth-child(1) .indexnewstabs-item__imgbox {
+.indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__imgbox {
   width: 630px;
   height: 100%;
   margin-left: 28px;
@@ -1270,7 +1279,7 @@ ul.stepper .step-title {
 }
 
 @media (min-width: 480px) {
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-date {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-date {
     padding-top: 0px;
     float: right;
     width: 90px;
@@ -1284,11 +1293,11 @@ ul.stepper .step-title {
     right: 90px;
     top: 10px;
   }
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title h3 {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-title h3 {
     color: #fff;
     font-size: 2.25em;
   }
-  article:nth-child(1) > div > div.indexnewstabs-item__info-date > div:nth-child(1) {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-date > div:nth-child(1) {
     display: block;
     width: 100%;
     font-size: 3.5em;
@@ -1301,7 +1310,7 @@ ul.stepper .step-title {
 }
 
 @media (max-width: 479px) {
-  .indexnewstabs-item:nth-child(1) {
+  .indexnewstabs-item.index:nth-child(1) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1311,7 +1320,7 @@ ul.stepper .step-title {
     margin-bottom: 20px;
   }
 
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info {
     position: static;
     padding-left: 0;
     padding-right: 0;
@@ -1328,19 +1337,19 @@ ul.stepper .step-title {
     padding-bottom: 20px;
     height: auto;
   }
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-title {
     width: 100%;
   }
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title h3 {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-title h3 {
     font-size: 1.125em;
   }
 
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info::after,
-  .indexnewstabs-item:nth-child(1)::before {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info::after,
+  .indexnewstabs-item.index:nth-child(1)::before {
     display: none;
   }
 
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__imgbox {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__imgbox {
     width: 100%;
     height: 220px;
     margin-left: 0px;
@@ -1377,7 +1386,7 @@ ul.stepper .step-title {
   .indexnewstabs-item__info-date {
     color: #999;
   }
-  /* .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-date div:nth-child(1) {
+  /* .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-date div:nth-child(1) {
     display: block;
     width: 100%;
     font-size: 3.5em;
@@ -1386,18 +1395,18 @@ ul.stepper .step-title {
     padding-bottom: 15px;
     line-height: 0.89;
   } */
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-date div:nth-child(2) {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info-date div:nth-child(2) {
     float: none;
   }
 }
 
 @media (max-width: 767px) {
-  .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info {
+  .indexnewstabs-item.index:nth-child(1) .indexnewstabs-item__info {
     width: 100%;
   }
 }
 @media (max-width: 1199px) {
-  .indexnewstabs-item:nth-child(1) {
+  .indexnewstabs-item.index:nth-child(1) {
     width: 100%;
   }
   .indexnewstabs-item {

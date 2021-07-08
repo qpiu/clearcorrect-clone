@@ -1,19 +1,22 @@
 import React from "react";
 import { CONTACT_ADDRESS, CONTACT_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK } from "../lib/constants";
 import styles from "./Footer.module.css";
+import Link from 'next/link'
 
-export default function Footer () {
+export default function Footer() {
   return (
-    <footer className={ styles.footerWrap }>
-      <div className={ styles.footer }>
-        <div className={ styles.widget }>
+    <footer className={styles.footerWrap}>
+      <div className={styles.footer}>
+        <div className={styles.widget}>
           <h2>
-            <a href="/">
-              ClearCorrect<span>Dental Clinic services</span>
-            </a>
+            <Link href="/">
+              <a>
+                ClearCorrect<span>Dental Clinic services</span>
+              </a>
+            </Link>
           </h2>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-          <div className={ styles.socialList }>
+          <div className={styles.socialList}>
             <li>
               <a className="social-icon" href={FACEBOOK_LINK}>
                 <span>
@@ -31,7 +34,7 @@ export default function Footer () {
           </div>
         </div>
 
-        <div className={ styles.links }>
+        <div className={styles.links}>
           <h2>Quick links</h2>
 
           <ul>
@@ -63,7 +66,7 @@ export default function Footer () {
           </ul>
         </div>
 
-        <div className={ styles.contact }>
+        <div className={styles.contact}>
           <h2>Have Questions?</h2>
           <ul>
             <li>
@@ -86,7 +89,7 @@ export default function Footer () {
         </div>
       </div>
 
-      <div className={ styles.copyRight }>
+      <div className={styles.copyRight}>
         <p>Copyright &copy; 2021 All rights reserved | ClearCorrect</p>
       </div>
     </footer>
