@@ -47,13 +47,13 @@ const ContactFormDoc = (props) => {
   return (
     <Form ref={formRef} noValidate validated={validated} className={props.activate === 0 ? `${styles.formWrap} ${styles.show}` : `${styles.formWrap} ${styles.hidden}`}>
       <Form.Group className="mb-4">
-        <Form.Label>Name</Form.Label>
+        <Form.Label>Name<span>*</span></Form.Label>
         <Form.Control required className="form-control" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
         <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>專業領域</Form.Label>
+        <Form.Label>專業領域<span>*</span></Form.Label>
         <Form.Control as="select" required className="form-control" name="form[specialist]" value={form.specialist || ""} onChange={(e) => setForm({ ...form, specialist: e.target.value })}>
           <option value="">請選擇</option>
           <option value="General Practitioner">General Practitioner</option>
@@ -64,7 +64,7 @@ const ContactFormDoc = (props) => {
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>Complete orthodontic cases</Form.Label>
+        <Form.Label>Complete orthodontic cases<span>*</span></Form.Label>
         <Form.Control as="select" required className="form-control" name="form[cases]" value={form.cases || ""} onChange={(e) => setForm({ ...form, cases: e.target.value })}>
           <option value="">請選擇</option>
           <option value="1-10">1-10</option>
@@ -79,25 +79,25 @@ const ContactFormDoc = (props) => {
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>院所名稱</Form.Label>
+        <Form.Label>院所名稱<span>*</span></Form.Label>
         <Form.Control required className="form-control" type="text" name="form[clinicname]" value={form.clinicname || ""} onChange={(e) => setForm({ ...form, clinicname: e.target.value })} />
         <Form.Control.Feedback type="invalid">請輸入您的院所名稱</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>院所地址</Form.Label>
+        <Form.Label>院所地址<span>*</span></Form.Label>
         <Form.Control required className="form-control" type="text" name="form[clinicaddress]" value={form.clinicaddress || ""} onChange={(e) => setForm({ ...form, clinicaddress: e.target.value })} />
         <Form.Control.Feedback type="invalid">請輸入您的院所地址</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>Email</Form.Label>
+        <Form.Label>Email<span>*</span></Form.Label>
         <Form.Control required className="form-control" type="email" name="form[email]" value={form.email || ""} onChange={(e) => setForm({ ...form, email: e.target.value })} />
         <Form.Control.Feedback type="invalid">請輸入您的Email</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>Phone Number</Form.Label>
+        <Form.Label>Phone Number<span>*</span></Form.Label>
         <Form.Control required className="form-control" type="text" name="form[phone]" value={form.phone || ""} onChange={(e) => setForm({ ...form, phone: e.target.value })} />
         <Form.Control.Feedback type="invalid">Please fill in your phone number</Form.Control.Feedback>
       </Form.Group>

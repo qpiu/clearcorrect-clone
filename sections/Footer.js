@@ -1,4 +1,5 @@
 import React from "react";
+import { CONTACT_ADDRESS, CONTACT_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK } from "../lib/constants";
 import styles from "./Footer.module.css";
 
 export default function Footer () {
@@ -7,21 +8,21 @@ export default function Footer () {
       <div className={ styles.footer }>
         <div className={ styles.widget }>
           <h2>
-            <a href="#">
+            <a href="/">
               ClearCorrect<span>Dental Clinic services</span>
             </a>
           </h2>
           <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
           <div className={ styles.socialList }>
             <li>
-              <a className="social-icon" href="#">
+              <a className="social-icon" href={FACEBOOK_LINK}>
                 <span>
                   <i className="fab fa-facebook-f"></i>
                 </span>
               </a>
             </li>
             <li>
-              <a className="social-icon" href="#">
+              <a className="social-icon" href={INSTAGRAM_LINK}>
                 <span>
                   <i className="fab fa-instagram"></i>
                 </span>
@@ -35,7 +36,7 @@ export default function Footer () {
 
           <ul>
             <li>
-              <a href="#">
+              <a href="/">
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
@@ -43,7 +44,7 @@ export default function Footer () {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="/whoweare">
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
@@ -52,7 +53,7 @@ export default function Footer () {
             </li>
 
             <li>
-              <a href="#">
+              <a href="/contact">
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
@@ -70,7 +71,7 @@ export default function Footer () {
                 <span>
                   <i className="fas fa-map"></i>
                 </span>
-                03 Fake St. Mountain View, San Francisco,
+                {CONTACT_ADDRESS}
               </a>
             </li>
             <li>
@@ -78,7 +79,7 @@ export default function Footer () {
                 <span>
                   <i className="fas fa-phone"></i>
                 </span>
-                +2 392 3929 210
+                {CONTACT_PHONE}
               </a>
             </li>
           </ul>

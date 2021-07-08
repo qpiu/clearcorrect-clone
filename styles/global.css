@@ -8,7 +8,6 @@
 body {
   color: #999;
   background-color: #f8f8f8;
-  height: 200vh;
   font-size: 16px;
   line-height: 1.8;
   font-family: "thesansb6_semibold";
@@ -59,6 +58,10 @@ img {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.form-label span {
+  color: #f95474;
+}
+
 .justufy-content-center {
   justify-content: center;
 }
@@ -69,10 +72,6 @@ img {
 
 .center {
   text-align: center;
-}
-
-.long {
-  /* padding-top: 3rem; */
 }
 
 .clear {
@@ -175,7 +174,7 @@ img {
   font-family: "thesansb6_semibold";
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.8);
-  margin: 3rem 0 1rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 .latest-news-section p {
@@ -446,6 +445,10 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.news-wrapper {
+  margin-bottom: 10rem;
 }
 
 .slider-wrap .img:after {
@@ -848,15 +851,9 @@ ul.stepper .step-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   width: calc(100% - 704px);
-  float: left;
 }
 
 .indexnewstabs-item:nth-child(1) {
@@ -1289,7 +1286,7 @@ ul.stepper .step-title {
   }
   .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title h3 {
     color: #fff;
-    font-size: 1.25em;
+    font-size: 2.25em;
   }
   article:nth-child(1) > div > div.indexnewstabs-item__info-date > div:nth-child(1) {
     display: block;
@@ -1329,7 +1326,6 @@ ul.stepper .step-title {
     padding-right: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #d8d8d8;
     height: auto;
   }
   .indexnewstabs-item:nth-child(1) .indexnewstabs-item__info-title {

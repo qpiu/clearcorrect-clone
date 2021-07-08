@@ -5,6 +5,7 @@ const title = [
   { title: "Who we are", href: "/whoweare/" },
   { title: "ClearCorrect", href: "/" },
   { title: "Your ClearCorrect Journey", href: "/journey/" },
+  { title: "最新消息", href: "/news/" },
   { title: "Health and Orthodontics", href: "/blog/" },
   { title: "Get in Touch", href: "/contact/" },
 ];
