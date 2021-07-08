@@ -11,7 +11,7 @@ const Hero = (props) => {
         <div className="container">
           <div className={styles.txtFlex}>
             <div className={styles.txtWrap}>
-              <Breadcrumbs useDefaultStyle transformLabel={(title) => (title === "Home" || title === "post") ? (title + " >") : (props.title + ' >')}></Breadcrumbs>
+              <Breadcrumbs useDefaultStyle labelsToUppercase transformLabel={(title) => (title === "Home" || title === "post") ? (title + " >") : (props.title + ' >')}></Breadcrumbs>
               <h1>{props.title}</h1>
             </div>
           </div>

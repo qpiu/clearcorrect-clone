@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm";
+import { FACEBOOK_LINK, INSTAGRAM_LINK } from "../lib/constants";
 import Hero from "../sections/Hero";
 
 export default function Contact() {
@@ -12,8 +13,8 @@ export default function Contact() {
         <div className="social-media mt-5">
             <h3>Follow Us Here</h3>
             <p>
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
+                <a href={FACEBOOK_LINK}>Facebook</a>
+                <a href={INSTAGRAM_LINK}>Instagram</a>
             </p>
         </div>
       </div>
