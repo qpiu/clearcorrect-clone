@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAuthor, getFeaturedImage } from "../lib/utils";
 
-export default function News({ post }) {
+export default function News({ post, index }) {
   const [postImgAndAuthor, setPostImgAndAuthor] = useState({ featImgUrl: "", author: "" });
   useEffect(() => {
     let mounted = true;
@@ -20,7 +20,7 @@ export default function News({ post }) {
     };
   }, []);
   return (
-    <article className="indexnewstabs-item">
+    <article className={`indexnewstabs-item ${index ? "index" : ""}`}>
       <div className="indexnewstabs-item__info">
         <div className="indexnewstabs-item__info-tag"></div>
         <div className="indexnewstabs-item__info-title">
@@ -41,3 +41,7 @@ export default function News({ post }) {
     </article>
   );
 }
+Date.prototype.getMonthName = function () {
+  var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  return monthNames[this.getMonth()];
+};

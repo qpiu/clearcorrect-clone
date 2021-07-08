@@ -22,7 +22,7 @@ const whoweare = () => {
       </Head>
       <IndexBelt></IndexBelt>
       <Carousel></Carousel>
-      <LatestNews></LatestNews>
+      <LatestNews index></LatestNews>
 
       <main className="clear">
         <section className="ftco-section ftco-no-pt ftco-no-pb" id="section2">
