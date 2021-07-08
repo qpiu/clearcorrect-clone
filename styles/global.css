@@ -59,6 +59,10 @@ img {
   color: rgba(0, 0, 0, 0.8);
 }
 
+.form-label span {
+  color: #f95474;
+}
+
 .justufy-content-center {
   justify-content: center;
 }
@@ -69,10 +73,6 @@ img {
 
 .center {
   text-align: center;
-}
-
-.long {
-  /* padding-top: 3rem; */
 }
 
 .clear {
