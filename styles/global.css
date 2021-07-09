@@ -505,6 +505,12 @@ img {
   justify-content: center;
 }
 
+.blogs-inner {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .blog {
   width: 50%;
   margin-bottom: 40px;
