@@ -8,34 +8,34 @@ import Pagination from "../components/Pagination";
 import BlogSide from "../sections/BlogSide";
 import { POST_CATEGORY } from "../lib/constants";
 
-export default function Blog() {
-  const [posts, setPosts] = useState([]);
-  const [totalPage, setTotalPage] = useState(null);
-  const [currentpage, setCurrentPage] = useState(1);
-  useEffect(async () => {
-    const totalPageFromServer = await getPostsCount(POST_CATEGORY.blog);
-    setTotalPage(+totalPageFromServer.page);
-    const postsFromServer = await getPostsFromServer(POST_CATEGORY.blog, currentpage);
-    setPosts(postsFromServer);
-  }, [currentpage]);
+export default function Blog () {
+  const [ posts, setPosts ] = useState( [] );
+  const [ totalPage, setTotalPage ] = useState( null );
+  const [ currentpage, setCurrentPage ] = useState( 1 );
+  useEffect( async () => {
+    const totalPageFromServer = await getPostsCount( POST_CATEGORY.blog );
+    setTotalPage( +totalPageFromServer.page );
+    const postsFromServer = await getPostsFromServer( POST_CATEGORY.blog, currentpage );
+    setPosts( postsFromServer );
+  }, [ currentpage ] );
   const goTop = () => {
-    setCurrentPage(1);
+    setCurrentPage( 1 );
   };
   const goLast = () => {
-    setCurrentPage(totalPage);
+    setCurrentPage( totalPage );
   };
   const goPrev = () => {
-    if (currentpage > 1) {
-      setCurrentPage((currentpage) => currentpage--);
+    if ( currentpage > 1 ) {
+      setCurrentPage( ( currentpage ) => currentpage-- );
     }
   };
   const goNext = () => {
-    if (currentpage < totalPage) {
-      setCurrentPage((currentpage) => currentpage++);
+    if ( currentpage < totalPage ) {
+      setCurrentPage( ( currentpage ) => currentpage++ );
     }
   };
-  const setPageFromChild = (index) => {
-    setCurrentPage(index);
+  const setPageFromChild = ( index ) => {
+    setCurrentPage( index );
   };
 
   return (
@@ -50,22 +50,22 @@ export default function Blog() {
       <main className="ftca-section ">
         <div className="container">
           <div className="flex mobile-block">
-              <div className="blogs">
-                <div className="blogs-inner">
-                  {posts.map((post, id) => {
-                    return (
-                      <div className="blog" key={id}>
-                        <Post post={post} />
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="flex justufy-content-center">
-                  <Pagination currentPage={currentpage} setPageFromChild={setPageFromChild} goNext={goNext} goLast={goLast} goPrev={goPrev} goTop={goTop} pageNum={Math.ceil(totalPage)} />
-                </div>
+            <div className="blogs">
+              <div className="blogs-inner">
+                { posts.map( ( post, id ) => {
+                  return (
+                    <div className="blog" key={ id }>
+                      <Post post={ post } />
+                    </div>
+                  );
+                } ) }
               </div>
+              <div className="flex justufy-content-center">
+                <Pagination currentPage={ currentpage } setPageFromChild={ setPageFromChild } goNext={ goNext } goLast={ goLast } goPrev={ goPrev } goTop={ goTop } pageNum={ Math.ceil( totalPage ) } />
+              </div>
+            </div>
             <div className="blog-side">
-              <BlogSide list={posts}></BlogSide>
+              <BlogSide list={ posts }></BlogSide>
             </div>
           </div>
         </div>
