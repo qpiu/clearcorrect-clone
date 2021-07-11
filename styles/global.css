@@ -35,6 +35,16 @@ img {
   max-width: 100%;
 }
 
+content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
 .ftca-section {
   padding: 2.5rem 0;
   position: relative;
