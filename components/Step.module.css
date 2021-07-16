@@ -25,7 +25,7 @@
 }
 
 .stepWrapReverse .stepTxt > div {
-    padding-left: 30px;
+  padding-left: 30px;
 }
 
 .stepTxt h3 {
@@ -62,5 +62,11 @@
   }
   .stepTxt {
     padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .stepWrapReverse .stepTxt > div {
+    padding-left: 0;
   }
 }

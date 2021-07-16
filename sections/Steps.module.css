@@ -76,4 +76,11 @@
     width: 100%;
 
   }
+  .stepsEnd {
+    display: block;
+  }
+  .stepsEndTxt,
+  .stepsEndImg {
+    width: 100%;
+  }
 }
