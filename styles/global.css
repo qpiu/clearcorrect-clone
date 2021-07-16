@@ -385,19 +385,19 @@ content {
 }
 
 .journey {
-  background-image: url("../public/assets/journey_hero.jpeg");
+  background-image: url("../public/assets/journey_hero.jpg");
 }
 
 .journey_1 {
-  background-image: url("../public/assets/journey_1.jpeg");
+  background-image: url("../public/assets/journey_1.jpg");
 }
 
 .journey_2 {
-  background-image: url("../public/assets/journey_2.jpeg");
+  background-image: url("../public/assets/journey_2.jpg");
 }
 
 .journey_3 {
-  background-image: url("../public/assets/journey_3.jpeg");
+  background-image: url("../public/assets/journey_3.jpg");
 }
 
 .slider-wrap {
@@ -720,11 +720,19 @@ ul.stepper .step-title {
 }
 
 .male-image {
-  background-image: url("../public/assets/male_img.jpeg");
+  background-image: url("../public/assets/male_img.png");
 }
 
 .female-image {
-  background-image: url("../public/assets/female_img.jpeg");
+  background-image: url("../public/assets/female_img.png");
+}
+
+.carousel_1 {
+  background-image: url('../public/assets/carousel_1.jpg');
+}
+
+.carousel_2 {
+  background-image: url('../public/assets/carousel_2.jpg');
 }
 
 .gender-radio input[type="radio"]:hover + .gender-radio-label {
