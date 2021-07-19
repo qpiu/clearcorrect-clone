@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <main>
         <Hero title="Who We Are" page="whoweare"></Hero>
-        <HeroBelt></HeroBelt>
+        {/* <HeroBelt></HeroBelt> */}
         <Fade bottom>
           <div className="container">
             <div className="flex mobile-block">

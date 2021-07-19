@@ -1,7 +1,7 @@
 .heroWrap {
   min-height: auto;
   z-index: 0;
-  height: 400px;
+  height: calc(100vh - 110px - 73px);
   background-position: center center;
   background-attachment: fixed;
   position: relative;
@@ -10,29 +10,36 @@
 }
 
 .txtFlex {
-    text-align: center;
-    display: flex;
-    align-items: flex-end;
-    height: 400px;
-    justify-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 110px - 73px);
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .txtWrap {
-    margin-bottom: 2rem;
-    color: #fff;
+  margin: 4rem 0 2rem 0;
+  color: #fff;
 }
 
 .txtWrap h1 {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 .whoweare {
-    background-image: url('../public/assets/who_we_are_bg.jpeg');
+  background-image: url("../public/assets/who_we_are_bg.jpeg");
 }
 
-
 @media screen and (max-width: 767px) {
-    .txtWrap h1 {
-        font-size: 40px;
-    }
+  .txtWrap h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .heroWrap,
+  .txtFlex {
+      height: calc(100vh - 75px - 44px);
+  }
 }
