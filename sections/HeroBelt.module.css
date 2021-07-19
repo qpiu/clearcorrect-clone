@@ -2,11 +2,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url("../public/assets/hero_2.jpeg");
   color: rgba(255, 255, 255, 0.8);
   z-index: 0;
   position: relative;
   padding: 3em 0;
+  width: 100%;
 }
 
 .heroBeltSection h1 {

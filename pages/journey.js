@@ -12,7 +12,7 @@ export default function journey() {
       </Head>
       <main>
         <Hero title="Your ClearCorrect Journey" page="journey"></Hero>
-        <HeroBelt></HeroBelt>
+        {/* <HeroBelt></HeroBelt> */}
           <Steps></Steps>
       </main>
     </div>
