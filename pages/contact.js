@@ -5,7 +5,7 @@ import Hero from "../sections/Hero";
 export default function Contact() {
   return (
     <div>
-      <Hero title="Get in Touch" page="journey"></Hero>
+      <Hero title="聯絡我們" page="journey"></Hero>
       <div className="contact-us-wrap">
         <h3>聯絡我們</h3>
         <p>如果有任何建議或想與我們聊聊，請不吝與我們聯繫！</p>
