@@ -31,7 +31,7 @@ const Steps = () => {
 
       <div className="ftca-section wcc-section">
         <div className="container">
-          <h2>Some tips for a fun Journey</h2>
+          <h2>矯正旅程的一些小訣竅</h2>
           <Fade bottom>
             <ul className={styles.stepBeltList}>
               {belt.map((el, i) => {
