@@ -9,13 +9,13 @@ const HeroBelt = () => {
       <div className="container flex mobile-block justify-content-center">
         <Fade bottom>
           <div className={styles.txtWrap}>
-            <span>BOOK YOUR APPOINTMENT</span>
-            <h1>Do not wait; make an appointment today!</h1>
+            <span>享樂人生 因齒完美</span>
+            <h1>別再猶豫！立刻諮詢展開您的矯正旅程</h1>
           </div>
         </Fade>
         <div className={styles.btnWrap}>
           <p>
-            <a href="/contact">Contact us</a>
+            <a href="/contact">聯絡我們</a>
           </p>
         </div>
       </div>

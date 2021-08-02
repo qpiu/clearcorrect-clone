@@ -1,9 +1,9 @@
 import React from "react";
 
 const list = [
-  { number: "3000", icon: "affection", content: "Happy Patients" },
-  { number: "2200", icon: "dental-care", content: "Performed Treatments" },
-  { number: "24", icon: "calendar", content: "Year of Experienced" },
+  { number: "3000", icon: "affection", content: "愉快的病患" },
+  { number: "2200", icon: "dental-care", content: "矯正經驗" },
+  { number: "15", icon: "calendar", content: "年經驗" },
 ];
 
 const IndexBelt = () => {

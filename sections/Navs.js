@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import Nav from "../components/Nav";
 import styles from "../sections/Navs.module.css";
 const title = [
-  { title: "Who we are", href: "/whoweare/" },
+  { title: "關於我們", href: "/whoweare/" },
   { title: "ClearCorrect", href: "/" },
-  { title: "Latest news", href: "/news/" },
-  { title: "Your ClearCorrect Journey", href: "/journey/" },
-  { title: "Health and Orthodontics", href: "/blog/" },
-  { title: "Get in Touch", href: "/contact/" },
+  { title: "最新消息", href: "/news/" },
+  { title: "樂齒之旅", href: "/journey/" },
+  { title: "健康與矯正", href: "/blog/" },
+  { title: "聯絡我們", href: "/contact/" },
 ];
 
 export default function Navs ( props ) {

@@ -5,9 +5,9 @@ import styles from "./Testimonies.module.css";
 import Fade from "react-reveal/Fade";
 
 const testimony = [
-  { name: "GERALD B.", txt: "They’ve been so easy and wonderful to use.", src: "user_1.jpeg" },
-  { name: "MERCEDES F.", txt: "“I smile a lot more and a lot bigger.” My favorite thing about ClearCorrect was no one knew I was doing it, and everybody complimented my smile while I was in treatment", src: "user_2.jpeg" },
-  { name: "CONNIE H.", txt: "“you just pop ‘em in and pop ‘em out.” I’m a professional, so, going out and meeting clients and everything—you just want to put on your best face, and be able to give them your best smile… I was so glad I did it. It just makes me feel better.", src: "user_3.jpeg" },
+  { name: "GERALD B.", txt: "使用起來很容易，而且整體療程體驗良好", src: "user_1.jpeg" },
+  { name: "MERCEDES F.", txt: "「相較過去我更加開朗，並更愛露出牙齒微笑」ClearCorrect最讓我喜歡的點就是，在矯正過程中，沒有人知道我正在進行牙齒矯正，人們也都不吝稱讚我的笑容。", src: "user_2.jpeg" },
+  { name: "CONNIE H.", txt: "「只要裝上去，然後拿下來」身為一位專業人士，所以無論是與客戶見面或其他場合，你一定會想用最好的樣貌面對他們，給他們最好的笑容…好慶幸我選擇了ClearCorrect透明牙套，讓我感覺變得比以前更出色。", src: "user_3.jpeg" },
 ];
 
 const Testimonies = () => {
@@ -17,8 +17,8 @@ const Testimonies = () => {
           <div className="container">
 
         <div className={styles.txtWrap}>
-          <h2>What can clear aligners do for me?</h2>
-          <p>Straighter teeth don’t just look better; they work better too. Poorly-aligned teeth can interfere with bite function, can wear out faster, and are more prone to cavities. And once you’ve got a smile you love, you may just find you can’t help but show it off.</p>
+          <h2>透明牙套能為我帶來什麼？</h2>
+          <p>整齊排列的牙齒不僅能使你看起來更有精神，在功能上也有所幫助。不整齊的牙齒除了咀嚼困難，牙齒的琺瑯質也容易磨損，更會加速蛀牙的風險。一旦你能自信微笑，可能會不自禁地綻放笑容</p>
         </div>
         </div>
       </Fade>

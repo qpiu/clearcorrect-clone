@@ -28,7 +28,7 @@ const LatestNews = (props) => {
 
   return (
     <div className="ftco-section latest-news-section">
-      <h3 className="dark-font center">Latest news</h3>
+      <h3 className="dark-font center">最新消息</h3>
       <p className="dark-font center">各種公告事項、重要訊息、學術活動、聯誼活動。</p>
       <div>
         <div className="flex justify-content-center">

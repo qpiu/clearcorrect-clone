@@ -15,10 +15,11 @@
 
 .txtWrap {
   width: 66.7%;
+  text-align: left;
 }
 
 .txtWrap span {
-  font-size: 13px;
+  font-size: 20px;
   display: block;
   margin-bottom: 5px;
   color: #fff;
@@ -36,7 +37,7 @@
   cursor: pointer;
   border-radius: 4px;
   box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;

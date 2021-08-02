@@ -11,7 +11,7 @@ export default function Footer() {
           <h2>
             <Link href="/">
               <a>
-                ClearCorrect<span>Dental Clinic services</span>
+                ClearCorrect<span>牙醫診所服務</span>
               </a>
             </Link>
           </h2>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.links}>
-          <h2>Quick links</h2>
+          <h2>連結</h2>
 
           <ul>
             <li>
@@ -43,7 +43,7 @@ export default function Footer() {
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
-                Home
+                首頁
               </a>
             </li>
             <li>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
-                About
+                關於我們
               </a>
             </li>
 
@@ -60,14 +60,14 @@ export default function Footer() {
                 <span>
                   <i className="fas fa-arrow-right"></i>
                 </span>
-                Contact
+                聯絡我們
               </a>
             </li>
           </ul>
         </div>
 
         <div className={styles.contact}>
-          <h2>Have Questions?</h2>
+          <h2>相關疑問</h2>
           <ul>
             <li>
               <a href="#">

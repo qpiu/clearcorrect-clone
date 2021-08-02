@@ -44,9 +44,7 @@ export default function Blog () {
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title="Health & Orthodontics" page="journey"></Hero>
-
-      <HeroBelt></HeroBelt>
+      <Hero title="健康與矯正" page="journey"></Hero>
       <main className="ftca-section ">
         <div className="container">
           <div className="flex mobile-block">
