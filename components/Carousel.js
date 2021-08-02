@@ -3,8 +3,8 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 
 const list = [
-  { title: "Dentist Services that You Can Trust", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", img: "carousel_1" },
-  { title: "A Brighter Dental Experienced", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.", img: "carousel_2" },
+  { title: "享樂人生 因齒完美", img: "carousel_1" },
+  { title: "享樂人生 因齒完美",  img: "carousel_2" },
 ];
 
 function useInterval(callback, delay) {

@@ -8,9 +8,9 @@ import Head from "next/head";
 import LatestNews from "../sections/LatestNews";
 
 const cards = [
-  { icon: "online-booking", title: "Easy Booking", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
-  { icon: "dentist", title: "Team Dentist", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
-  { icon: "offer", title: "Best Price Guarantee", content: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts." },
+  { icon: "online-booking", title: "簡單預約", content: "只要幾個簡單動作\n旅程即將展開" },
+  { icon: "dentist", title: "牙醫師團隊", content: "專業的牙醫師團隊 \n 為您量身訂製" },
+  { icon: "offer", title: "最划算的價格", content: "以經濟實惠的價格 \n 換得未來的享樂人生" },
 ];
 
 const whoweare = () => {
@@ -31,7 +31,7 @@ const whoweare = () => {
               <div className="col-md-12 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
                 <div className="mt-0 my-lg-4 py-4">
                   <span className="subheading">Learn Anything</span>
-                  <h2 className="mb-2">We Offer Best Dental Services</h2>
+                  <h2 className="mb-2">我們提供最好的牙醫服務</h2>
 
                   <div className="row mt-4 g-lg-2">
                     {cards.map((el, i) => {
@@ -54,10 +54,9 @@ const whoweare = () => {
                 <div className="mt-0 my-lg-5 py-5">
                   <p>
                     {" "}
-                    <span className="subheading">Welcome to our Dental Clinic</span>
+                    <span className="subheading">歡迎來到我們的樂齒世界</span>
                   </p>
-                  <h2 className="mb-2">ClearCorrect is a Dental Clinic and Innovative Approach to Treatment</h2>
-                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                  <h2 className="mb-2">ClearCorrect透過創新的矯正方式，讓您盡情享受人生</h2>
 
                   <Fade bottom>
                     <div className="row section-counter mt-5 long">
@@ -70,7 +69,7 @@ const whoweare = () => {
                             <h2 className="number">
                               <CountUp number={3000}></CountUp>
                             </h2>
-                            <span className="caption">Happy Patients</span>
+                            <span className="caption">愉快的病患</span>
                           </div>
                         </div>
                       </div>
@@ -83,7 +82,7 @@ const whoweare = () => {
                             <h2 className="number">
                               <CountUp number={2200}></CountUp>
                             </h2>
-                            <span className="caption">Performed Treatments</span>
+                            <span className="caption">矯正經驗</span>
                           </div>
                         </div>
                       </div>
@@ -94,9 +93,9 @@ const whoweare = () => {
                           </div>
                           <div className="text">
                             <h2 className="number">
-                              <CountUp number={24}></CountUp>
+                              <CountUp number={15}></CountUp>
                             </h2>
-                            <span className="caption">Year of Experienced</span>
+                            <span className="caption">年經驗</span>
                           </div>
                         </div>
                       </div>

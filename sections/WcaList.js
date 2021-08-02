@@ -2,9 +2,9 @@ import React from "react";
 import WcaItem from "../components/WcaItem";
 
 const list = [
-  { src: "comfortable-icon.png", txt: "COMFORTABLE" },
-  { src: "removable-icon.png", txt: "REMOVABLE" },
-  { src: "invisible-icon.png", txt: "NEARLY INVISIBLE" },
+  { src: "comfortable-icon.png", txt: "配戴舒適" },
+  { src: "removable-icon.png", txt: "簡單摘戴" },
+  { src: "invisible-icon.png", txt: "簡單摘戴" },
 ];
 
 export default function WcaList () {

@@ -7,8 +7,8 @@ export default function Contact() {
     <div>
       <Hero title="Get in Touch" page="journey"></Hero>
       <div className="contact-us-wrap">
-        <h3>Contact us</h3>
-        <p>We're open for any suggestion or just to have a chat</p>
+        <h3>聯絡我們</h3>
+        <p>如果有任何建議或想與我們聊聊，請不吝與我們聯繫！</p>
         <ContactForm />
         <div className="social-media mt-5">
             <h3>Follow Us Here</h3>

@@ -14,12 +14,12 @@
   display: flex;
   align-items: center;
   height: calc(100vh - 110px - 73px);
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
 }
 
 .txtWrap {
-  margin: 4rem 0 2rem 0;
+  margin: 8rem 0 4rem 0;
   color: #fff;
 }
 

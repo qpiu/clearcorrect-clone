@@ -11,7 +11,7 @@ export default function journey() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero title="Your ClearCorrect Journey" page="journey"></Hero>
+        <Hero title="樂齒之旅" page="journey"></Hero>
         {/* <HeroBelt></HeroBelt> */}
           <Steps></Steps>
       </main>
