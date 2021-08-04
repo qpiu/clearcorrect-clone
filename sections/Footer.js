@@ -1,7 +1,8 @@
 import React from "react";
-import { CONTACT_ADDRESS, CONTACT_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK } from "../lib/constants";
+import { CONTACT_ADDRESS, CONTACT_PHONE, FACEBOOK_LINK, INSTAGRAM_LINK, CONTACT_EMAIL } from "../lib/constants";
 import styles from "./Footer.module.css";
 import Link from 'next/link'
+
 
 export default function Footer() {
   return (
@@ -11,21 +12,21 @@ export default function Footer() {
           <h2>
             <Link href="/">
               <a>
-                ClearCorrect<span>牙醫診所服務</span>
+                ClearCorrect<span>追蹤我們</span>
               </a>
             </Link>
           </h2>
-          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+    
           <div className={styles.socialList}>
             <li>
-              <a className="social-icon" href={FACEBOOK_LINK}>
+              <a className="social-icon" target="_blank" href={FACEBOOK_LINK}>
                 <span>
                   <i className="fab fa-facebook-f"></i>
                 </span>
               </a>
             </li>
             <li>
-              <a className="social-icon" href={INSTAGRAM_LINK}>
+              <a className="social-icon" target="_blank" href={INSTAGRAM_LINK}>
                 <span>
                   <i className="fab fa-instagram"></i>
                 </span>
@@ -67,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.contact}>
-          <h2>相關疑問</h2>
+          <h2>ClearCorrect相關問題，歡迎聯繫我們</h2>
           <ul>
             <li>
               <a href="#">
@@ -78,11 +79,19 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="tel:02-8178-6167">
                 <span>
                   <i className="fas fa-phone"></i>
                 </span>
                 {CONTACT_PHONE}
+              </a>
+            </li>
+            <li>
+              <a href="mailto:twprovider@clearcorrect.com">
+                <span>
+                <i class="far fa-envelope"></i>
+                </span>
+                {CONTACT_EMAIL}
               </a>
             </li>
           </ul>

@@ -98,4 +98,7 @@
     margin: 0;
     padding: 0;
   }
+  .contact > ul {
+    padding: 0;
+  }
 }
