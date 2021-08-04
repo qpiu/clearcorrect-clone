@@ -11,7 +11,7 @@ export default function Contact() {
         <p>如果有任何建議或想與我們聊聊，請不吝與我們聯繫！</p>
         <ContactForm />
         <div className="social-media mt-5">
-            <h3>Follow Us Here</h3>
+            <h3>追蹤我們</h3>
             <p>
                 <a href={FACEBOOK_LINK}>Facebook</a>
                 <a href={INSTAGRAM_LINK}>Instagram</a>
