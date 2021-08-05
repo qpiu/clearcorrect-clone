@@ -23,9 +23,9 @@ export default function Home() {
               <div className="hero-one-txt">
                 <h1>嘿！我們是ClearCorrect</h1>
                 <h3>很高興認識你</h3>
-                <p>ClearCorrect™ 由牙醫 Willis Pumphrey 博士於 2006 年創立，當時他經手超過 400 多名的患者，飽受齒列不整所苦惱，希望能藉由隱形牙套進行治療，但卻找不到人為他們製作矯正器。</p>
+                <p>ClearCorrect™ 由牙醫 Willis Pumphrey 博士於 2006 年創立，當時他經手超過 400 多名的患者，飽受齒列不整所苦惱，希望能藉由透明牙套進行治療，但卻找不到人為他們製作矯正器。</p>
                 <p>因此，Willis Pumphrey 博士為這些病人投入了大量的時間研究與努力，進而創立了 ClearCorrect™ 來為他的患者進行矯正，並成功治療了 400 名患者，且成效相當卓越！</p>
-                <p>優異的產品逐漸地引起美國各地牙醫紛紛開始嘗試 Willis Pumphrey 博士的隱形牙套矯正解決方案，ClearCorrect 也隨之成立並開始發展。</p>
+                <p>優異的產品逐漸地引起美國各地牙醫紛紛開始嘗試 Willis Pumphrey 博士的透明牙套矯正解決方案，ClearCorrect 也隨之成立並開始發展。</p>
                 <p>時至今日，我們已為世界各地數以萬計的牙醫師提供服務，並提供了超過數百萬副的矯正器。我們持續傾聽客戶的意見，並將您的需求放在首位。這就是讓我們堅持超過 15 年的原因。</p>
                 <p>我們是ClearCorrect – 透明，簡單，友善</p>
               </div>
