@@ -9,15 +9,19 @@ import BlogSide from "../../sections/BlogSide";
 
 export default function Post ( { title, featuredImg, author, content, date, categories } ) {
   const [ posts, setPosts ] = useState( [] );
+  console.log(categories)
   useEffect( async () => {
     let mounted = true;
     if ( mounted ) {
       const postsFromServer = await getPostsFromServer( POST_CATEGORY.blog, 1 );
-      let result = postsFromServer.filter( ( el ) => el.categories[ 0 ] === categories );
-      setPosts( result );
+      // console.log(postsFromServer)
+      // let result = postsFromServer.filter( ( el ) => el.categories[ 0 ] === categories );
+      setPosts( postsFromServer );
     }
     return () => ( mounted = false );
   }, [] );
+  console.log('hi')
+  console.log(posts)
   return (
     <div className="">
       <Head>

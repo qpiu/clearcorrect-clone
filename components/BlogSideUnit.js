@@ -37,11 +37,11 @@ const BlogSideUnit = ( props ) => {
               <span className="fa fa-calendar"></span> { props.el.date }
             </a>
           </div>
-          <div>
+          {/* <div>
             <a href={ props.el.href }>
               <span className="fa fa-user"></span> { props.el.author }
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
