@@ -20,14 +20,14 @@ const Top = () => {
 
         <div className="flex align-item-center">
           <li>
-            <a className="social-icon square pink top" href={FACEBOOK_LINK}>
+            <a target="_blank" className="social-icon square pink top" href={FACEBOOK_LINK}>
               <span>
                 <i className="fab fa-facebook-f"></i>
               </span>
             </a>
           </li>
           <li>
-            <a className="social-icon square pink top" href={INSTAGRAM_LINK}>
+            <a target="_blank" className="social-icon square pink top" href={INSTAGRAM_LINK}>
               <span>
                 <i className="fab fa-instagram"></i>
               </span>
