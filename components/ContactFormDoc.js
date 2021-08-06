@@ -110,7 +110,7 @@ const ContactFormDoc = (props) => {
         </div>
       </Form.Group>
       <Form.Group  controlId="formBasicCheckbox">
-        <Form.Check required type="checkbox" label="勾選此欄位，我已於提交個人資料前詳閱Straumann ClearCorrect隱私政策，並同意透過電子郵件、電話或我同意的其他方式接收Straumann ClearCorrect , 其關係企業及合作夥伴提供的 Clearcorrect 產品資訊。這些資訊可能包含產品行銷內容,特殊優惠,有用的提示,以及向您請求關於使用ClearCorrect產品體驗或諮詢經驗的回饋。" />
+        <Form.Check required type="checkbox" label="勾選此欄位，我已於提交個人資料前詳閱Straumann ClearCorrect隱私政策，並同意透過電子郵件、電話或我同意的其他方式接收Straumann ClearCorrect，其關係企業及合作夥伴提供的 Clearcorrect 產品資訊。這些資訊可能包含產品行銷內容、特殊優惠、有用的提示、以及向您請求關於使用ClearCorrect產品體驗或諮詢經驗的回饋。" />
       </Form.Group>
 
       <div className={styles.btnBlock}>
