@@ -733,11 +733,11 @@ ul.stepper .step-title {
 }
 
 .carousel_1 {
-  background-image: url('../public/assets/carousel_1.jpg');
+  background-image: url("../public/assets/carousel_1.jpg");
 }
 
 .carousel_2 {
-  background-image: url('../public/assets/carousel_2.jpg');
+  background-image: url("../public/assets/carousel_2.jpg");
 }
 
 .gender-radio input[type="radio"]:hover + .gender-radio-label {
@@ -1151,6 +1151,10 @@ ul.stepper .step-title {
   .m360 {
     display: block;
   }
+  .dca-head,
+  .dca-img-block {
+    width: 100%;
+  }
 }
 
 .block-21 .blog-img {
@@ -1212,12 +1216,10 @@ ul.stepper .step-title {
     padding: 15px 20px;
     display: block;
     width: 100%;
-
   }
   .dca-img-block {
     padding: 15px;
     width: 100%;
-
   }
 }
 
