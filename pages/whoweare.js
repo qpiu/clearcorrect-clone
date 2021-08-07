@@ -46,7 +46,7 @@ export default function Home() {
         </Fade>
         <Fade bottom>
           <section className="ftca-section">
-            <div className="container flex">
+            <div className="container flex mobile-block">
               <div className="dca-head">
                 <h2>透明牙套是如何讓您擁有完美笑容？</h2>
                 <p>根據牙醫師的專業診斷開始您的矯正旅程。
