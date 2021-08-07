@@ -3,9 +3,8 @@
   z-index: 0;
   height: calc(100vh - 110px - 73px);
   background-position: center center;
-  background-attachment: fixed;
   position: relative;
-  background-size: cover;
+  background-size: cover !important;
   background-repeat: no-repeat;
 }
 
