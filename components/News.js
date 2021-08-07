@@ -4,8 +4,6 @@ import { getAuthor, getFeaturedImage } from "../lib/utils";
 export default function News({ post, index }) {
   const [postImgAndAuthor, setPostImgAndAuthor] = useState({ featImgUrl: "", author: "" });
   useEffect(() => {
-    let mounted = true;
-    if (mounted) {
       const author = getAuthor(post.author);
       const featuredImg = getFeaturedImage(post.featured_media);
       Promise.all([author, featuredImg]).then((res) => {
@@ -14,10 +12,6 @@ export default function News({ post, index }) {
           featImgUrl: res[1],
         });
       });
-    }
-    return () => {
-      mounted = false;
-    };
   }, []);
   return (
     <article className={`indexnewstabs-item ${index ? "index" : ""}`}>

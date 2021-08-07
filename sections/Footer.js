@@ -89,7 +89,7 @@ export default function Footer() {
             <li>
               <a href="mailto:twprovider@clearcorrect.com">
                 <span>
-                <i class="far fa-envelope"></i>
+                <i className="far fa-envelope"></i>
                 </span>
                 {CONTACT_EMAIL}
               </a>
