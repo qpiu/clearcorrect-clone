@@ -551,6 +551,11 @@ content {
   color: #57c2b1;
 }
 
+.social-media {
+  position: relative;
+  z-index: 3;
+}
+
 .social-media p a {
   color: #57c2b1;
   text-transform: uppercase;

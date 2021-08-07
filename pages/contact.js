@@ -13,8 +13,8 @@ export default function Contact() {
         <div className="social-media mt-5">
             <h3>追蹤我們</h3>
             <p>
-                <a href={FACEBOOK_LINK}>Facebook</a>
-                <a href={INSTAGRAM_LINK}>Instagram</a>
+                <a target="_blank" href={FACEBOOK_LINK}>Facebook</a>
+                <a target="_blank" href={INSTAGRAM_LINK}>Instagram</a>
             </p>
         </div>
       </div>
