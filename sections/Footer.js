@@ -12,7 +12,7 @@ export default function Footer() {
           <h2>
             <Link href="/">
               <a>
-                ClearCorrect<span>追蹤我們</span>
+              享樂人生 因齒完美 展開您的矯正旅程<span>追蹤我們</span>
               </a>
             </Link>
           </h2>
@@ -68,7 +68,7 @@ export default function Footer() {
         </div>
 
         <div className={styles.contact}>
-          <h2>ClearCorrect相關問題，歡迎聯繫我們</h2>
+          <h2>聯繫我們</h2>
           <ul>
             <li>
               <a href="#">
