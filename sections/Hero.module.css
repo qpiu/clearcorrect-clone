@@ -40,4 +40,8 @@
   .txtFlex {
       height: calc(100vh - 75px - 44px);
   }
+  .heroWrap {
+    background-attachment: initial;
+    background-size: cover;
+  }
 }
