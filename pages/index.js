@@ -20,7 +20,7 @@ const whoweare = () => {
         <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <IndexBelt></IndexBelt>
+      {/* <IndexBelt></IndexBelt> */}
       <Carousel></Carousel>
       <LatestNews index></LatestNews>
 
@@ -58,7 +58,7 @@ const whoweare = () => {
                   </p>
                   <h2 className="mb-2">ClearCorrect透過創新的矯正方式，讓您盡情享受人生</h2>
 
-                  <Fade bottom>
+                  {/* <Fade bottom>
                     <div className="row section-counter mt-5 long">
                       <div className="col-sm-6 col-md-6 col-lg-4 d-flex align-items-stretch">
                         <div className="counter-wrap-2 d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
@@ -100,7 +100,7 @@ const whoweare = () => {
                         </div>
                       </div>
                     </div>
-                  </Fade>
+                  </Fade> */}
                 </div>
               </div>
             </div>
