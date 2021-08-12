@@ -2,6 +2,7 @@
     background-color: #36393A;
     padding: 1.2em 0;
     height: 110px;
+    display: flex;
 
 }
 
@@ -10,6 +11,8 @@
     justify-content: space-between;
     max-width: 960px;
     margin: auto;
+    align-items: center;
+    width: 100%;
 }
 
 .ctaButton {
