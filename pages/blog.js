@@ -18,6 +18,7 @@ export default function Blog () {
     const postsFromServer = await getPostsFromServer( POST_CATEGORY.blog, currentpage );
     setPosts( postsFromServer );
   }, [ currentpage ] );
+  console.log(posts)
   const goTop = () => {
     setCurrentPage( 1 );
   };
