@@ -34,12 +34,12 @@ export default function Post ( { post } ) {
             </h4>
             <h4>
               <i className="fas fa-user"></i>
-              { post.author === 1 ? "Marketing" : "KKK" }
+              { post.author === 1 ? "小編" : "總編" }
             </h4>
           </div>
           <h3>
             <Link href={ `/post/${ post.id }` }>
-              <a className="text-4xl font-bold">{ post.title.rendered }</a>
+              <a href={ `/post/${ post.id }` } className="text-4xl font-bold">{ post.title.rendered }</a>
             </Link>
           </h3>
           <div className="mt-2 relative">
