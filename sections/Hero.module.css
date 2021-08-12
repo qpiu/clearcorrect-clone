@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 769px) {
   .heroWrap,
   .txtFlex {
       height: calc(100vh - 75px - 44px);
