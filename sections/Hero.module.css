@@ -2,9 +2,16 @@
   z-index: 0;
   height: calc(100vh - 110px - 73px);
   background-position: center;
-  background-attachment: fixed;
   position: relative;
   background-size: cover;
+  background-attachment: scroll;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-attachment: scroll;
+  -webkit-background-attachment: scroll;
+  -ms-background-attachment: scroll;
+  background-repeat: no-repeat;
 }
 
 .txtFlex {
@@ -38,7 +45,7 @@
 @media screen and (max-width: 1025px) {
   .heroWrap,
   .txtFlex {
-      height: calc(100vh - 75px - 44px);
+    height: calc(100vh - 75px - 44px);
   }
   .heroWrap {
     background-attachment: scroll;
@@ -50,5 +57,11 @@
     -webkit-background-attachment: scroll;
     -ms-background-attachment: scroll;
     background-repeat: no-repeat;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .heroWrap {
+    background-attachment: fixed;
   }
 }
