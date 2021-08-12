@@ -12,7 +12,7 @@ export default function Post ( { title, featuredImg, author, content, date, cate
   useEffect( async () => {
     let mounted = true;
     if ( mounted ) {
-      const postsFromServer = await getPostsFromServer( POST_CATEGORY.blog, 1 );
+      const postsFromServer = await getPostsFromServer( categories, 1 );
       setPosts( postsFromServer );
     }
     return () => ( mounted = false );
