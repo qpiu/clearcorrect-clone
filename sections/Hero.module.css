@@ -41,10 +41,14 @@
       height: calc(100vh - 75px - 44px);
   }
   .heroWrap {
-    background-attachment: initial;
+    background-attachment: scroll;
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -ms-background-size: cover;
+    -moz-background-attachment: scroll;
+    -webkit-background-attachment: scroll;
+    -ms-background-attachment: scroll;
+    background-repeat: no-repeat;
   }
 }
