@@ -41,10 +41,10 @@ content {
   flex-direction: column;
 }
 
-
 iframe {
   position: absolute;
-  top: 0;left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -209,6 +209,10 @@ iframe {
   line-height: 1.4;
   color: rgba(0, 0, 0, 0.8);
   margin: 2rem 0 1rem 0;
+}
+
+.latest-wrapper {
+  margin-bottom: 2rem;
 }
 
 .latest-news-section p {
@@ -528,6 +532,16 @@ iframe {
   width: 75%;
   flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+}
+
+.blogs ul {
+  padding: 0;
+}
+.blogs img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .blogs-inner {
