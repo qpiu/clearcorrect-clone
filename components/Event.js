@@ -35,7 +35,7 @@ const Event = ({ post }) => {
             {post.title.rendered}
           </a>
 
-          <div className="indexnewsstyle-item__text"> {post.author === 1 ? "小編" : "總編"}</div>
+          {/* <div className="indexnewsstyle-item__text"> {post.author === 1 ? "小編" : "總編"}</div> */}
 
           <a href={`/post/${post.id}`} className="indexnewsstyle-item__btn">
             閱讀更多

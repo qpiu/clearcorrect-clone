@@ -53,7 +53,7 @@ export default function Blog () {
               <div className="blogs-inner">
                 { posts.map( ( post, id ) => {
                   return (
-                    <div className="blog" key={ id }>
+                    <div className="blog-list" key={ id }>
                       <Post post={ post } />
                     </div>
                   );

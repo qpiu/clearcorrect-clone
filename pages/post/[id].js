@@ -26,7 +26,7 @@ export default function Post ( { title, featuredImg, author, content, date, cate
       <Hero title={ title } page="journey"></Hero>
       <main className="ftca-section">
         <section className="flex container mobile-block">
-          <div className="blogs mr-5">
+          <div className="blog mr-5">
             <p>
               <img src={ featuredImg } />
             </p>

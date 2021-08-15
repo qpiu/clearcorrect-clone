@@ -28,15 +28,15 @@
   width: 0;
   z-index: -1;
   position: absolute;
-  /* display: none; */
+  display: none;
 }
 
 .block {
-  opacity: 1;
+  display: block;
 }
 
 .none {
-  opacity: 0;
+  display: none;
 }
 
 .success {
