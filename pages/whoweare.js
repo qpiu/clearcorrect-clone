@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>ClearCorrect</title>
+        <title>Clearcorrect - 關於我們</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

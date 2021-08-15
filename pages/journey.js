@@ -7,11 +7,11 @@ export default function journey() {
   return (
     <div>
       <Head>
-        <title>ClearCorrect</title>
+        <title>ClearCorrect - 樂齒之旅</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Hero title="樂齒之旅" page="journey"></Hero>
+        <Hero title="" page="journey"></Hero>
         {/* <HeroBelt></HeroBelt> */}
           <Steps></Steps>
       </main>

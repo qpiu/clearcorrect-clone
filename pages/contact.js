@@ -5,6 +5,10 @@ import Hero from "../sections/Hero";
 export default function Contact() {
   return (
     <div>
+      <Head>
+        <title>Clearcorrect - 聯絡我們</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Hero title="聯絡我們" page="journey"></Hero>
       <div className="contact-us-wrap">
         <h3>聯絡我們</h3>

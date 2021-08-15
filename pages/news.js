@@ -36,22 +36,13 @@ const news = () => {
     setPosts( postsFromServer );
   }, [ currentpage ] );
   return (
-    // <div className="container flex-grow">
-    //   <div className="news-wrapper flex flex-column align-item-center">
-    //     <h3 className="dark-font center">最新消息</h3>
-    //     <p className="dark-font center">各種公告事項、重要訊息、學術活動、聯誼活動。</p>
-    //     { posts.map( ( el, i ) => {
-    //       if ( el.categories[ 0 ] === 3 ) {
-    //         return <News key={ i } post={ el }></News>;
-    //       }
-    //     } ) }
-    //     <div className="flex justufy-content-center mt-3-g">
-    //       <Pagination currentPage={ currentpage } setPageFromChild={ setPageFromChild } goNext={ goNext } goLast={ goLast } goPrev={ goPrev } goTop={ goTop } pageNum={ Math.ceil( totalPage ) } />
-    //     </div>
-    //   </div>
-    // </div>
+    <>
+     <Head>
+        <title>Clearcorrect - 最新消息</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <LatestNews index></LatestNews>
-
+</>
   );
 };
 
