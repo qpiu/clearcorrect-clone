@@ -532,6 +532,12 @@ iframe {
   width: 75%;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.blog {
+  width: 75%;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 
@@ -550,9 +556,9 @@ iframe {
   flex-wrap: wrap;
 }
 
-.blog {
-  width: 50%;
+.blog-list {
   margin-bottom: 40px;
+  width: 50%;
 }
 
 .blog-side {

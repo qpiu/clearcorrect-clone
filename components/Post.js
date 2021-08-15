@@ -32,10 +32,10 @@ export default function Post ( { post } ) {
               <i className="fas fa-calendar-alt"></i>
               { new Date( post.date ).toDateString() }
             </h4>
-            <h4>
+            {/* <h4>
               <i className="fas fa-user"></i>
               { post.author === 1 ? "小編" : "總編" }
-            </h4>
+            </h4> */}
           </div>
           <h3>
             <Link href={ `/post/${ post.id }` }>

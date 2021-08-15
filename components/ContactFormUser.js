@@ -88,8 +88,8 @@ const ContactFormUser = (props) => {
       <Form.Group>
         <p>
           隱私權政策：
-          <Link href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">
-            <a>請點我</a>
+          <Link target="_blank" href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">
+            <a target="_blank" href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">請點我</a>
           </Link>
         </p>
         <Form.Group controlId="formBasicCheckbox">
