@@ -20,7 +20,7 @@ export default function Post ( { title, featuredImg, author, content, date, cate
   return (
     <div className="">
       <Head>
-        <title>{ title }</title>
+        <title>ClearCorrect{ title }</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero title={ title } page="journey"></Hero>
