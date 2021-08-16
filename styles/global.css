@@ -561,6 +561,10 @@ iframe {
   width: 50%;
 }
 
+.height-700 {
+  height: 700px;
+}
+
 .blog-side {
   margin-bottom: 30px;
   padding: 10px;

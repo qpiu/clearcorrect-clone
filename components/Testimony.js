@@ -14,7 +14,7 @@ const Testimony = (props) => {
       </div>
       <div>
         <div className={styles.userImg}>
-          <img src={`../assets/${props.el.src}`} />
+          <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src={`../assets/${props.el.src}`} />
         </div>
       </div>
     </div>

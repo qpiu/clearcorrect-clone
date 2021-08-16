@@ -12,7 +12,7 @@ const Top = () => {
           <div>
             <Link href="/">
               <a>
-                <img src="/assets/logo.png" alt="me" width="300" />
+                <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src="/assets/logo.png" alt="me" width="300" />
               </a>
             </Link>
           </div>

@@ -6,7 +6,6 @@ export default function Contact() {
   return (
     <div>
       <Head>
-        <title>Clearcorrect - 聯絡我們</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero title="聯絡我們" page="journey"></Hero>
