@@ -34,8 +34,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="ClearCorrect透明牙套的專家，具有15年歷史，已爲世界各地數以萬計的牙醫師提供服務，並提供了超過數百萬副的矯正器，享樂人生，因齒完美。我們是ClearCorrect-透明，簡單，友善" />
         <meta name="keywords" content="ClearCorrect,矯正,牙齒,透明,牙套,隱形,透明牙套,隱形牙套,矯正器,舒立齊,牙醫,牙科,牙齒矯正,專家,享樂,享樂人生,因齒完美,蛀牙,拔牙,牙周病,美白,笑容,開心,自信,整齊,潔白,魅力,治療,調整,咬合不正,戽斗,根管治療,職涯,植材,植體" />
         <meta property="og:image" content="https://www.clearcorrect.tw/_next/static/media/who_we_are_bg.c02b9c3b0f193a07ad7c17f9d3107376.jpeg"/>
-        <meta name="google-site-verification" content="google986070547bb33795.html"/>
-
+        <meta name="google-site-verification" content="ml0tif-9eGNzAWh-GD0Ap85BBWwjfVA2E9rQyoc7v6o" />
       </Head>
       <content>
         <Top></Top>
