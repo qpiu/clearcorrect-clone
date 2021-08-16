@@ -37,8 +37,6 @@ const ContactFormUser = (props) => {
       axios
         .post(FORM_POST_URL_PATIENT, formData, { headers: { "Content-Type": "multipart/form-data" } })
         .then(function (response) {
-          //handle success
-          console.log(response);
           setForm({ yourname: "", youremail: "", yourphone: "", info: "", yourarea: "" });
           setSuccess(1);
         })
