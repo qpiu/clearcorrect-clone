@@ -9,9 +9,6 @@ import Fade from "react-reveal/Fade";
 export default function Home() {
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Hero title="關於我們" page="whoweare"></Hero>
         {/* <HeroBelt></HeroBelt> */}

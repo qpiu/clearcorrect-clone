@@ -41,10 +41,6 @@ export default function Blog () {
 
   return (
     <div>
-      <Head>
-        {/* <title>ClearCorrect - 健康與矯正</title> */}
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <Hero title="健康與矯正" page="journey"></Hero>
       <main className="ftca-section ">
         <div className="container">

@@ -16,10 +16,6 @@ const cards = [
 const whoweare = () => {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      {/* <IndexBelt></IndexBelt> */}
       <Carousel></Carousel>
       <LatestNews index></LatestNews>
 

@@ -6,9 +6,6 @@ import Steps from "../sections/Steps";
 export default function journey() {
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Hero title="" page="journey"></Hero>
         {/* <HeroBelt></HeroBelt> */}
