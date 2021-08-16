@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Clearcorrect - 關於我們</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
@@ -53,7 +52,7 @@ export default function Home() {
 以先進技術製作專屬於你的透明牙套，透過配戴牙套讓牙齒循序漸進地移動到理想位置，讓自信笑容在您的臉上綻放。</p>
               </div>
               <div className="dca-img-block">
-                <img src="../assets/teeth_flow.jpg" />
+                <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src="../assets/teeth_flow.jpg" />
               </div>
             </div>
           </section>

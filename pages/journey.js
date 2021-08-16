@@ -7,7 +7,6 @@ export default function journey() {
   return (
     <div>
       <Head>
-        <title>ClearCorrect - 樂齒之旅</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

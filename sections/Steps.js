@@ -38,7 +38,7 @@ const Steps = () => {
                 return (
                   <li key={i}>
                     <div className={styles.imgBlock}>
-                      <img src={`../assets/step_belt_${i}.png`} />
+                      <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src={`../assets/step_belt_${i}.png`} />
                     </div>
                     <div className={styles.txtBlock}>
                       <p>{el}</p>

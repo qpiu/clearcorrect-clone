@@ -17,7 +17,6 @@ const whoweare = () => {
   return (
     <>
       <Head>
-        <title>ClearCorrect</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <IndexBelt></IndexBelt> */}
@@ -47,7 +46,7 @@ const whoweare = () => {
           <div className="container-xl">
             <div className="row g-xl-5">
               <div className="col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                <div className="img w-100" style={{ backgroundImage: `url('../assets/about.jpg')` }}></div>
+                <div className="img w-100 height-700" style={{ backgroundImage: `url('../assets/about.jpg')` }}></div>
               </div>
 
               <div className="col-md-6 heading-section d-flex align-items-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
