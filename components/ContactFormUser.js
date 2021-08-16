@@ -40,6 +40,7 @@ const ContactFormUser = (props) => {
           //handle success
           console.log(response);
           setForm({ yourname: "", youremail: "", yourphone: "", info: "", yourarea: "" });
+          setSuccess(1);
         })
         .catch(function (response) {
           //handle error
@@ -52,7 +53,9 @@ const ContactFormUser = (props) => {
   return (
     <Form ref={formRef} noValidate validated={validated} className={props.activate === 1 ? `${styles.formWrap} ${styles.show}` : `${styles.formWrap} ${styles.hidden}`}>
       <Form.Group className="mb-4">
-        <Form.Label>您希望獲得哪些ClearCorrect相關資訊？<span>*</span></Form.Label>
+        <Form.Label>
+          您希望獲得哪些ClearCorrect相關資訊？<span>*</span>
+        </Form.Label>
         <Form.Control as="select" required className="form-control" name="form[info]" value={form.info || ""} onChange={(e) => setForm({ ...form, info: e.target.value })}>
           <option value="">請選擇</option>
           <option value="了解ClearCorrect牙套">了解ClearCorrect牙套</option>
@@ -62,13 +65,17 @@ const ContactFormUser = (props) => {
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>請填寫您的姓名<span>*</span></Form.Label>
+        <Form.Label>
+          請填寫您的姓名<span>*</span>
+        </Form.Label>
         <Form.Control required className="form-control" type="text" name="form[yourname]" value={form.yourname || ""} onChange={(e) => setForm({ ...form, yourname: e.target.value })} />
         <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>電子信箱<span>*</span></Form.Label>
+        <Form.Label>
+          電子信箱<span>*</span>
+        </Form.Label>
         <Form.Control required className="form-control" type="email" name="form[youremail]" value={form.youremail || ""} onChange={(e) => setForm({ ...form, youremail: e.target.value })} />
         <Form.Control.Feedback type="invalid">Please choose a username.</Form.Control.Feedback>
       </Form.Group>
@@ -80,7 +87,9 @@ const ContactFormUser = (props) => {
       </Form.Group>
 
       <Form.Group className="mb-4">
-        <Form.Label>聯絡電話<span>*</span></Form.Label>
+        <Form.Label>
+          聯絡電話<span>*</span>
+        </Form.Label>
         <Form.Control required className="form-control" type="text" name="form[yourphone]" value={form.yourphone || ""} onChange={(e) => setForm({ ...form, yourphone: e.target.value })} />
         <Form.Control.Feedback type="invalid">Please fill in your phone number</Form.Control.Feedback>
       </Form.Group>
@@ -89,7 +98,9 @@ const ContactFormUser = (props) => {
         <p>
           隱私權政策：
           <Link target="_blank" href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">
-            <a target="_blank" href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">請點我</a>
+            <a target="_blank" href="https://www.straumann.com/clearcorrect/us/en/home/privacy-notice.html">
+              請點我
+            </a>
           </Link>
         </p>
         <Form.Group controlId="formBasicCheckbox">
