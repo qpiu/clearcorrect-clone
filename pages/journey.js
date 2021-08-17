@@ -7,7 +7,7 @@ export default function journey() {
   return (
     <div>
       <main>
-        <Hero title="" page="journey"></Hero>
+        <Hero title="樂齒之旅" page="journey"></Hero>
         {/* <HeroBelt></HeroBelt> */}
           <Steps></Steps>
       </main>
