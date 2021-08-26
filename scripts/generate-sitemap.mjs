@@ -27,7 +27,7 @@ async function generate() {
 
             return `
               <url>
-                  <loc>${`https://leerob.io${route}`}</loc>
+                  <loc>${`https://clearcorrect.tw/${route}`}</loc>
               </url>
             `;
           })
