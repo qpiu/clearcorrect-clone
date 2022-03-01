@@ -5,7 +5,7 @@ import Event from "../components/Event";
 import { POST_CATEGORY } from "../lib/constants";
 
 const LatestNews = ( props ) => {
-  const [ currentCategory, setCurrentCategory ] = useState( POST_CATEGORY.News );
+  const [ currentCategory, setCurrentCategory ] = useState( 4 );
   const [ posts, setPosts ] = useState( [] );
   const [ news, setNews ] = useState( [] );
   const [ events, setEvents ] = useState( [] );
@@ -15,9 +15,9 @@ const LatestNews = ( props ) => {
     const postsFromServer = await getPostsFromServer( currentCategory, 1 );
     setPosts( postsFromServer );
     postsFromServer.forEach( ( el ) => {
-      if ( el.categories[ 0 ] === POST_CATEGORY.News ) {
+      if ( el.categories[ 0 ] === 4 ) {
         newsArray.push( el );
-      } else if ( el.categories[ 0 ] === POST_CATEGORY.Event ) {
+      } else if ( el.categories[ 0 ] === 3 ) {
         eventsArray.push( el );
       }
     } );
@@ -33,22 +33,22 @@ const LatestNews = ( props ) => {
       <p className="dark-font center">各種公告事項、重要訊息、學術活動、聯誼活動。</p>
       <div>
         <div className="flex justify-content-center">
-          <div className={ currentCategory === POST_CATEGORY.News ? "news-select active" : "news-select" } onClick={ () => setCurrentCategory( POST_CATEGORY.News ) }>
+          <div className={ currentCategory === 4 ? "news-select active" : "news-select" } onClick={ () => setCurrentCategory( 4 ) }>
             News
           </div>
-          <div className={ currentCategory === POST_CATEGORY.Event ? "news-select active" : "news-select" } onClick={ () => setCurrentCategory( POST_CATEGORY.Event ) }>
+          <div className={ currentCategory === 3 ? "news-select active" : "news-select" } onClick={ () => setCurrentCategory( 3 ) }>
             Event
           </div>
         </div>
         <div className="latest-wrapper">
           <div className="container">
-            <div className={ currentCategory === POST_CATEGORY.News ? "show" : "hidden" }>
+            <div className={ currentCategory === 4 ? "show" : "hidden" }>
               { news.map( ( el, i ) => {
                 return <News key={ i } post={ el } index={ props.index }></News>;
               } ) }
             </div>
 
-            <div className={ currentCategory === POST_CATEGORY.Event ? "show" : "hidden" }>
+            <div className={ currentCategory === 3 ? "show" : "hidden" }>
               { events.map( ( el, i ) => {
                 return <Event key={ i } post={ el }></Event>;
               } ) }
