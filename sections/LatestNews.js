@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getPostsFromServer } from "../lib/utils";
 import News from "../components/News";
 import Event from "../components/Event";
+import { POST_CATEGORY } from "../lib/constants";
 
 const LatestNews = ( props ) => {
   const [ currentCategory, setCurrentCategory ] = useState( POST_CATEGORY.News );
