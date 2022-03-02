@@ -26,7 +26,7 @@ const ContactFormDoc = (props) => {
     for (let key in data) {
       formData.append(key, data[key]);
     }
-    //const formElement = event.target;
+
     if (formRef.current.checkValidity()) {
       axios
         .post(FORM_POST_URL_DOCTOR, formData, { headers: { "Content-Type": "multipart/form-data" } })
