@@ -49,6 +49,7 @@ export async function getStaticPaths () {
     res = await axios.get( POSTS_API_URL );
   } catch ( error ) {
     console.log( error );
+    return { paths: [], fallback: false };
   }
   const posts = res.data;
   // Get the paths we want to pre-render based on posts
