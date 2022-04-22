@@ -28,7 +28,7 @@ export default function Post ( { title, featuredImg, author, content, date, cate
         <section className="flex container mobile-block">
           <div className="blog mr-5">
             <p>
-              {featuredImg? <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src={ featuredImg } /> : ''}
+              { featuredImg ? <img alt="ClearCorrect透明牙套的專家-透明，簡單，友善" src={ featuredImg } /> : '' }
             </p>
             <h2 className="dark-font">{ title }</h2>
             <div>{ parse( content ) }</div>
@@ -44,7 +44,13 @@ export default function Post ( { title, featuredImg, author, content, date, cate
 
 // This function gets called at build time
 export async function getStaticPaths () {
-  const res = await axios.get( POSTS_API_URL );
+  let res;
+  try {
+    res = await axios.get( POSTS_API_URL );
+  } catch ( error ) {
+    console.log( error );
+    return {};
+  }
   const posts = res.data;
   // Get the paths we want to pre-render based on posts
   const paths = posts.map( ( post ) => ( {
